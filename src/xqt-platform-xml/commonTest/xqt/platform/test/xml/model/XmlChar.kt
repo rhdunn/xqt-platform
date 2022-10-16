@@ -60,4 +60,14 @@ class AnXmlCharValue {
 
         assertEquals(XmlChar(0x1F601), c)
     }
+
+    @Test
+    @DisplayName("can compare to other XmlChar values")
+    fun can_compare_to_other_xml_char_values() {
+        assertEquals(1, XmlChar(0x50).compareTo(XmlChar(0x40)))
+
+        assertEquals(0, XmlChar(0x50).compareTo(XmlChar(0x50)))
+
+        assertEquals(-1, XmlChar(0x50).compareTo(XmlChar(0x60)))
+    }
 }

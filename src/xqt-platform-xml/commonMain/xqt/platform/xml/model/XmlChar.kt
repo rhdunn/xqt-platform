@@ -11,7 +11,7 @@ import kotlin.jvm.JvmInline
  * @see <a href="http://www.w3.org/TR/REC-xml/#NT-Char">http://www.w3.org/TR/REC-xml/#NT-Char</a>
  */
 @JvmInline
-value class XmlChar(val codepoint: Int) {
+value class XmlChar(val codepoint: Int) : Comparable<XmlChar> {
     /**
      * Creates an XML character from a Kotlin character.
      */
@@ -38,6 +38,15 @@ value class XmlChar(val codepoint: Int) {
             hi.toChar().toString() + lo.toChar().toString()
         }
     }
+
+    /**
+     * Compares this object with the specified object for order.
+     *
+     * @return zero if this object is equal to the specified `other` object,
+     *         a negative number if it's less than `other`,
+     *         or a positive number if it's greater than `other`.
+     */
+    override fun compareTo(other: XmlChar): Int = codepoint.compareTo(other.codepoint)
 
     companion object {
         private fun toCodePoint(high: Char, low: Char): Int {
