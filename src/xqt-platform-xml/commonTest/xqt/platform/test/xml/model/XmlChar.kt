@@ -50,4 +50,14 @@ class AnXmlCharValue {
 
         assertEquals(XmlChar(0x20), c)
     }
+
+    @Test
+    @DisplayName("can be created from a surrogate pair")
+    fun can_be_created_from_a_surrogate_pair() {
+        val c = XmlChar(0xD83D.toChar(), 0xDE01.toChar())
+        assertEquals(0x1F601, c.codepoint)
+        assertEquals("\uD83D\uDE01", c.toString())
+
+        assertEquals(XmlChar(0x1F601), c)
+    }
 }

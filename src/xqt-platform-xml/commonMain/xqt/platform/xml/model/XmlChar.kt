@@ -18,6 +18,14 @@ value class XmlChar(val codepoint: Int) {
     constructor(c: Char) : this(c.code)
 
     /**
+     * Creates an XML character from a surrogate pair.
+     *
+     * @param high The high-surrogate value.
+     * @param low The low-surrogate value.
+     */
+    constructor(high: Char, low: Char) : this(toCodePoint(high, low))
+
+    /**
      * Returns the UTF-16 representation of the XML character.
      */
     override fun toString(): String = when {
@@ -28,6 +36,14 @@ value class XmlChar(val codepoint: Int) {
             val hi = 0xD800 + base.floorDiv(0x400)
             val lo = 0xDC00 + base % 0x400
             hi.toChar().toString() + lo.toChar().toString()
+        }
+    }
+
+    companion object {
+        private fun toCodePoint(high: Char, low: Char): Int {
+            val hi = (high.code - 0xD800) * 0x400
+            val lo = low.code - 0xDC00
+            return 0x10000 + hi + lo
         }
     }
 }
