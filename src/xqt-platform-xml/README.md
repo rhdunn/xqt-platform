@@ -5,8 +5,11 @@ The following specifications are supported:
 1. [Extensible Markup Language (XML) 1.0 (Fifth Edition)](https://www.w3.org/TR/2008/REC-xml-20081126/)
 2. [Namespaces in XML 1.0 (Third Edition)](https://www.w3.org/TR/2009/REC-xml-names-20091208/)
 
-The following XML grammar constructs are supported:
+The following XML lexical constructs are supported:
 1. `Char` is modelled as an [XmlChar](commonMain/xqt/platform/xml/model/XmlChar.kt) class.
+
+The following lexical constructs are also supported:
+1. `Digit := [0-9]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt)
 
 The following classes are designed to help implement lexers and tokenizers that
 use XML constructs as their base:
