@@ -60,6 +60,7 @@ kotlin {
             kotlin.srcDir("commonTest")
             dependencies {
                 implementation(kotlin("test"))
+                implementation(project(":src:kotlinx-test"))
             }
         }
 
