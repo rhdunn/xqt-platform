@@ -13,6 +13,11 @@ import kotlin.jvm.JvmInline
 @JvmInline
 value class XmlChar(val codepoint: Int) {
     /**
+     * Creates an XML character from a Kotlin character.
+     */
+    constructor(c: Char) : this(c.code)
+
+    /**
      * Returns the UTF-16 representation of the XML character.
      */
     override fun toString(): String = when {

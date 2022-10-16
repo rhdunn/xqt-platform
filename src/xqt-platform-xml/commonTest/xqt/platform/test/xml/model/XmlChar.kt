@@ -38,3 +38,16 @@ class AnXmlCharValueCanBeCreatedFromACodePoint {
         assertEquals(XmlChar(0x1F601), c)
     }
 }
+
+@DisplayName("An XmlChar value")
+class AnXmlCharValue {
+    @Test
+    @DisplayName("can be created from a Char value")
+    fun can_be_created_from_a_char_value() {
+        val c = XmlChar(' ')
+        assertEquals(0x20, c.codepoint)
+        assertEquals(" ", c.toString())
+
+        assertEquals(XmlChar(0x20), c)
+    }
+}
