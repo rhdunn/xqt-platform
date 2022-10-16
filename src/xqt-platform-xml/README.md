@@ -7,3 +7,9 @@ The following specifications are supported:
 
 The following XML grammar constructs are supported:
 1. `Char` is modelled as an [XmlChar](commonMain/xqt/platform/xml/model/XmlChar.kt) class.
+
+The following classes are designed to help implement lexers and tokenizers that
+use XML constructs as their base:
+1. [CharacterClass](commonMain/xqt/platform/xml/lexer/CharacterClass.kt) &ndash;
+   An interface for testing if an `XmlChar` is in a given character class, i.e.
+   the character is in a set of codepoints.
