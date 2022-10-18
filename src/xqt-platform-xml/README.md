@@ -6,7 +6,8 @@ The following specifications are supported:
 2. [Namespaces in XML 1.0 (Third Edition)](https://www.w3.org/TR/2009/REC-xml-names-20091208/)
 
 The following XML lexical constructs are supported:
-1. `Char` is modelled as an [XmlChar](commonMain/xqt/platform/xml/model/XmlChar.kt) class.
+1. `Char` is modelled as an [XmlChar](commonMain/xqt/platform/xml/model/XmlChar.kt)
+   class and the `Character` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
 2. `S` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
 3. `NameStartChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
 4. `NameChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).

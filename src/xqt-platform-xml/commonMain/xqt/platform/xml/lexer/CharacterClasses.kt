@@ -39,6 +39,26 @@ object AlphaNumeric : CharacterClass {
 }
 
 /**
+ * An XML character.
+ *
+ *     Char := [#x9] | [#xA] | [#xD]
+ *           | [#x20-#xD7FF]
+ *           | [#xE000-#xFFFD]
+ *           | [#x10000-#x10FFFF]
+ *
+ * @see <a href="https://www.w3.org/TR/REC-xml/#NT-Char">https://www.w3.org/TR/REC-xml/#NT-Char</a>
+ */
+object Character : CharacterClass {
+    override fun contains(c: Int): Boolean = when {
+        c <= 0x1F -> c in S
+        c <= 0xD7FF -> true
+        c <= 0xDFFF -> false
+        c <= 0x10FFFF -> c != 0xFFFE && c != 0xFFFF
+        else -> false
+    }
+}
+
+/**
  * A whitespace character.
  *
  *     S := [#x20] | [#x9] | [#xD] | [#xA]

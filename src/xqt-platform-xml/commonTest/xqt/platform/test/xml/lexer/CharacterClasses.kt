@@ -63,6 +63,46 @@ class CharacterClassesSupportTestingIfAnXmlCharBelongsTo {
     }
 
     @Test
+    @DisplayName("the Character character class")
+    fun the_character_character_class() {
+        // [#x9] | [#xA] | [#xD]
+        assertFalse(XmlChar(0x01) in Character)
+        assertTrue(XmlChar('\t') in Character)
+        assertTrue(XmlChar('\r') in Character)
+        assertTrue(XmlChar('\n') in Character)
+        assertFalse(XmlChar(0x1F) in Character)
+
+        // [#x20-#xD7FF]
+        assertTrue(XmlChar(0x0020) in Character)
+        assertTrue(XmlChar(0x0075) in Character)
+        assertTrue(XmlChar(0x012E) in Character)
+        assertTrue(XmlChar(0xD7FF) in Character)
+
+        // [#xD800-#xDFFF] -- exclude surrogate pair codepoints
+        assertFalse(XmlChar(0xD800) in Character)
+        assertFalse(XmlChar(0xDBB0) in Character)
+        assertFalse(XmlChar(0xDFFF) in Character)
+
+        // [#xE000-#xFFFD]
+        assertTrue(XmlChar(0xE000) in Character)
+        assertTrue(XmlChar(0xF0A5) in Character)
+        assertTrue(XmlChar(0xFFFD) in Character)
+
+        // [#xFFFE-#xFFFF]
+        assertFalse(XmlChar(0xFFFE) in Character)
+        assertFalse(XmlChar(0xFFFF) in Character)
+
+        // [#x10000-#x10FFFF]
+        assertTrue(XmlChar(0x010000) in Character)
+        assertTrue(XmlChar(0x0A96B2) in Character)
+        assertTrue(XmlChar(0x10FFFF) in Character)
+
+        assertFalse(XmlChar(0x110000) in Character)
+        assertFalse(XmlChar(0x16B37C) in Character)
+        assertFalse(XmlChar(0xFFFFFF) in Character)
+    }
+
+    @Test
     @DisplayName("the S character class")
     fun the_s_character_class() {
         assertTrue(XmlChar(' ') in S)
