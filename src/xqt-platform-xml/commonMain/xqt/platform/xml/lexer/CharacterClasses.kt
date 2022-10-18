@@ -13,6 +13,19 @@ object Digit : CharacterClass {
 }
 
 /**
+ * A hexadecimal digit.
+ *
+ *     HexDigit := [0-9] | [A-F] | [a-f]
+ */
+object HexDigit : CharacterClass {
+    private val digit = '0'.code..'9'.code
+    private val lower = 'a'.code..'f'.code
+    private val upper = 'A'.code..'F'.code
+
+    override fun contains(c: Int): Boolean = c in digit || c in lower || c in upper
+}
+
+/**
  * An XML name start character.
  *
  *     NameStartChar ::= ":" | [A-Z] | "_" | [a-z]

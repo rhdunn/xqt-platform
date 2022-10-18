@@ -11,7 +11,8 @@ The following XML lexical constructs are supported:
 3. `NameChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
 
 The following lexical constructs are also supported:
-1. `Digit := [0-9]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt)
+1. `Digit := [0-9]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
+2. `HexDigit := [0-9] | [A-F] | [a-f]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
 
 The following classes are designed to help implement lexers and tokenizers that
 use XML constructs as their base:

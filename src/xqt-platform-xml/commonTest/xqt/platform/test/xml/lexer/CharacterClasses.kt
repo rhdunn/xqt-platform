@@ -3,6 +3,7 @@ package xqt.platform.test.xml.lexer
 
 import kotlinx.test.DisplayName
 import xqt.platform.xml.lexer.Digit
+import xqt.platform.xml.lexer.HexDigit
 import xqt.platform.xml.lexer.NameChar
 import xqt.platform.xml.lexer.NameStartChar
 import xqt.platform.xml.model.XmlChar
@@ -22,6 +23,28 @@ class CharacterClassesSupportTestingIfAnXmlCharBelongsTo {
         assertFalse(XmlChar('a') in Digit)
         assertFalse(XmlChar('A') in Digit)
         assertFalse(XmlChar('=') in Digit)
+    }
+
+    @Test
+    @DisplayName("the HexDigit character class")
+    fun the_hex_digit_character_class() {
+        assertTrue(XmlChar('0') in HexDigit)
+        assertTrue(XmlChar('5') in HexDigit)
+        assertTrue(XmlChar('9') in HexDigit)
+
+        assertTrue(XmlChar('a') in HexDigit)
+        assertTrue(XmlChar('c') in HexDigit)
+        assertTrue(XmlChar('f') in HexDigit)
+        assertFalse(XmlChar('g') in HexDigit)
+        assertFalse(XmlChar('z') in HexDigit)
+
+        assertTrue(XmlChar('A') in HexDigit)
+        assertTrue(XmlChar('C') in HexDigit)
+        assertTrue(XmlChar('F') in HexDigit)
+        assertFalse(XmlChar('G') in HexDigit)
+        assertFalse(XmlChar('Z') in HexDigit)
+
+        assertFalse(XmlChar('=') in HexDigit)
     }
 
     @Test
