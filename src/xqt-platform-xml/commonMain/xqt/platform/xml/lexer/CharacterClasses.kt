@@ -39,6 +39,25 @@ object AlphaNumeric : CharacterClass {
 }
 
 /**
+ * A whitespace character.
+ *
+ *     S := [#x20] | [#x9] | [#xD] | [#xA]
+ *
+ * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S">https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S</a>
+ */
+object S : CharacterClass {
+    private const val HT = 0x09 // U+0009 CHARACTER TABULATION
+    private const val LF = 0x0A // U+000A LINE FEED
+    private const val CR = 0x0D // U+000D CARRIAGE RETURN
+    private const val SP = 0x20 // U+0020 SPACE
+
+    override fun contains(c: Int): Boolean = when {
+        c <= 0x20 -> c == SP || c == HT || c == CR || c == LF
+        else -> false
+    }
+}
+
+/**
  * An XML name start character.
  *
  *     NameStartChar ::= ":" | [A-Z] | "_" | [a-z]

@@ -7,8 +7,9 @@ The following specifications are supported:
 
 The following XML lexical constructs are supported:
 1. `Char` is modelled as an [XmlChar](commonMain/xqt/platform/xml/model/XmlChar.kt) class.
-2. `NameStartChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
-3. `NameChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
+2. `S` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
+3. `NameStartChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
+4. `NameChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
 
 The following lexical constructs are also supported:
 1. `Digit := [0-9]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).

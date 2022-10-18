@@ -63,6 +63,20 @@ class CharacterClassesSupportTestingIfAnXmlCharBelongsTo {
     }
 
     @Test
+    @DisplayName("the S character class")
+    fun the_s_character_class() {
+        assertTrue(XmlChar(' ') in S)
+        assertTrue(XmlChar('\t') in S)
+        assertTrue(XmlChar('\r') in S)
+        assertTrue(XmlChar('\n') in S)
+
+        assertFalse(XmlChar('0') in S)
+        assertFalse(XmlChar('a') in S)
+        assertFalse(XmlChar('A') in S)
+        assertFalse(XmlChar('=') in S)
+    }
+
+    @Test
     @DisplayName("the NameStartChar character class")
     fun the_name_start_char_character_class() {
         assertTrue(XmlChar(':') in NameStartChar)
