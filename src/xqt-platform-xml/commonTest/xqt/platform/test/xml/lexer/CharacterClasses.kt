@@ -2,10 +2,7 @@
 package xqt.platform.test.xml.lexer
 
 import kotlinx.test.DisplayName
-import xqt.platform.xml.lexer.Digit
-import xqt.platform.xml.lexer.HexDigit
-import xqt.platform.xml.lexer.NameChar
-import xqt.platform.xml.lexer.NameStartChar
+import xqt.platform.xml.lexer.*
 import xqt.platform.xml.model.XmlChar
 import kotlin.test.Test
 import kotlin.test.assertFalse
@@ -45,6 +42,24 @@ class CharacterClassesSupportTestingIfAnXmlCharBelongsTo {
         assertFalse(XmlChar('Z') in HexDigit)
 
         assertFalse(XmlChar('=') in HexDigit)
+    }
+
+    @Test
+    @DisplayName("the AlphaNumeric character class")
+    fun the_alpha_numeric_character_class() {
+        assertTrue(XmlChar('0') in AlphaNumeric)
+        assertTrue(XmlChar('5') in AlphaNumeric)
+        assertTrue(XmlChar('9') in AlphaNumeric)
+
+        assertTrue(XmlChar('a') in AlphaNumeric)
+        assertTrue(XmlChar('g') in AlphaNumeric)
+        assertTrue(XmlChar('z') in AlphaNumeric)
+
+        assertTrue(XmlChar('A') in AlphaNumeric)
+        assertTrue(XmlChar('G') in AlphaNumeric)
+        assertTrue(XmlChar('Z') in AlphaNumeric)
+
+        assertFalse(XmlChar('=') in AlphaNumeric)
     }
 
     @Test

@@ -26,6 +26,19 @@ object HexDigit : CharacterClass {
 }
 
 /**
+ * An ASCII alphanumeric character.
+ *
+ *     AlphaNumeric := [0-9] | [A-Z] | [a-z]
+ */
+object AlphaNumeric : CharacterClass {
+    private val digit = '0'.code..'9'.code
+    private val lower = 'a'.code..'z'.code
+    private val upper = 'A'.code..'Z'.code
+
+    override fun contains(c: Int): Boolean = c in digit || c in lower || c in upper
+}
+
+/**
  * An XML name start character.
  *
  *     NameStartChar ::= ":" | [A-Z] | "_" | [a-z]
@@ -75,8 +88,6 @@ object NameStartChar : CharacterClass {
  */
 object NameChar : CharacterClass {
     private val symbols = setOf('-'.code, '.'.code, ':'.code, '_'.code)
-    private val ascii_lower = 'a'.code .. 'z'.code
-    private val ascii_upper = 'A'.code .. 'Z'.code
 
     private val nsc_200c_200d = 0x200C .. 0x200D
     private val nsc_203f_2040 = 0x203F .. 0x2040
@@ -85,7 +96,7 @@ object NameChar : CharacterClass {
     private val nsc_f900_fdcf = 0xF900 .. 0xFCDF
 
     override fun contains(c: Int): Boolean = when {
-        c <= 0x7F -> c in symbols || c in ascii_upper || c in ascii_lower || c in Digit
+        c <= 0x7F -> c in symbols || c in AlphaNumeric
         c <= 0xBF -> c == 0xB7
         c <= 0x1FFF -> c != 0xD7 && c != 0xF7 && c != 0x37E
         c <= 0x2FEF -> c in nsc_200c_200d || c in nsc_203f_2040 || c in nsc_2070_218f || c >= 0x2C00
