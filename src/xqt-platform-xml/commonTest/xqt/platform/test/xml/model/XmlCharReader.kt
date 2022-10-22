@@ -2,6 +2,7 @@
 package xqt.platform.test.xml.model
 
 import kotlinx.test.DisplayName
+import xqt.platform.xml.lexer.Digit
 import xqt.platform.xml.model.XmlChar
 import xqt.platform.xml.model.XmlCharReader
 import kotlin.test.Test
@@ -239,5 +240,22 @@ class AnXmlCharReaderCanReadXmlCharValues {
         reader.advance()
         assertEquals(11, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+    }
+}
+
+@DisplayName("An XmlCharReader can")
+class AnXmlCharReaderCan {
+    @Test
+    @DisplayName("read all characters matching a predicate")
+    fun read_all_characters_matching_a_predicate() {
+        val reader = XmlCharReader()
+        reader.reset("123 456")
+
+        assertEquals(0, reader.currentOffset)
+        assertEquals(XmlChar('1'), reader.currentChar)
+
+        reader.advanceWhile { it in Digit }
+        assertEquals(3, reader.currentOffset)
+        assertEquals(XmlChar(' '), reader.currentChar)
     }
 }

@@ -52,6 +52,25 @@ class XmlCharReader {
     }
 
     /**
+     * Advances to the next XmlChar in the buffer that does not match the predicate.
+     *
+     * This can be used to implement `T+` and `T*` constructs in lexical tokens.
+     * For example, the lexical token:
+     *
+     *     Digits := [0-9]+
+     *
+     * can be implemented as:
+     *
+     *     if (reader.currentChar in Digit) {
+     *         reader.advanceWhile { it in Digit }
+     *     }
+     */
+    fun advanceWhile(predicate: (XmlChar) -> Boolean) {
+        while (predicate(currentChar))
+            advance()
+    }
+
+    /**
      * The underlying UTF-16 character sequence.
      */
     var buffer: CharSequence = ""
