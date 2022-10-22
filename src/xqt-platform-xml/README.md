@@ -24,3 +24,5 @@ use XML constructs as their base:
 1. [CharacterClass](commonMain/xqt/platform/xml/lexer/CharacterClass.kt) &ndash;
    An interface for testing if an `XmlChar` is in a given character class, i.e.
    the character is in a set of codepoints.
+2. [XmlCharReader](commonMain/xqt/platform/xml/model/XmlCharReader.kt) &ndash;
+   Reads `XmlChar` values in order in the specified `CharSequence`.
