@@ -9,10 +9,12 @@ class XmlCharReader {
      * Reset the reader to the specified character sequence.
      *
      * @param buffer The character sequence to read from.
+     * @param startOffset The offset of the first codepoint in the buffer to read from.
      * @param bufferEndOffset The offset of the last codepoint in the buffer to read up to.
      */
-    fun reset(buffer: CharSequence, bufferEndOffset: Int) {
+    fun reset(buffer: CharSequence, startOffset: Int, bufferEndOffset: Int) {
         this.buffer = buffer
+        this.currentOffset = startOffset
         this.bufferEndOffset = bufferEndOffset
     }
 
@@ -20,8 +22,9 @@ class XmlCharReader {
      * Reset the reader to the specified character sequence.
      *
      * @param buffer The character sequence to read from.
+     * @param startOffset The offset of the first codepoint in the buffer to read from.
      */
-    fun reset(buffer: CharSequence): Unit = reset(buffer, buffer.length)
+    fun reset(buffer: CharSequence, startOffset: Int = 0): Unit = reset(buffer, startOffset, buffer.length)
 
     /**
      * The underlying UTF-16 character sequence.
@@ -33,5 +36,11 @@ class XmlCharReader {
      * The end of the buffer, or the point to read up to.
      */
     var bufferEndOffset: Int = 0
+        private set
+
+    /**
+     * The offset of the current XmlChar in the buffer.
+     */
+    var currentOffset: Int = 0
         private set
 }

@@ -14,6 +14,7 @@ class AnXmlCharReaderCanBeInitialized {
         val reader = XmlCharReader()
 
         assertEquals("", reader.buffer)
+        assertEquals(0, reader.currentOffset)
         assertEquals(0, reader.bufferEndOffset)
     }
 
@@ -21,19 +22,32 @@ class AnXmlCharReaderCanBeInitialized {
     @DisplayName("from reset with a buffer")
     fun from_reset_with_a_buffer() {
         val reader = XmlCharReader()
-        reader.reset("lorem ipsum")
+        reader.reset("lorem ipsum dolor")
 
-        assertEquals("lorem ipsum", reader.buffer)
-        assertEquals(11, reader.bufferEndOffset)
+        assertEquals("lorem ipsum dolor", reader.buffer)
+        assertEquals(0, reader.currentOffset)
+        assertEquals(17, reader.bufferEndOffset)
     }
 
     @Test
-    @DisplayName("from reset with a buffer and end offset")
-    fun from_reset_with_a_buffer_and_end_offset() {
+    @DisplayName("from reset with a buffer and start offset")
+    fun from_reset_with_a_buffer_and_start_offset() {
         val reader = XmlCharReader()
-        reader.reset("lorem ipsum", 5)
+        reader.reset("lorem ipsum dolor", 6)
 
-        assertEquals("lorem ipsum", reader.buffer)
-        assertEquals(5, reader.bufferEndOffset)
+        assertEquals("lorem ipsum dolor", reader.buffer)
+        assertEquals(6, reader.currentOffset)
+        assertEquals(17, reader.bufferEndOffset)
+    }
+
+    @Test
+    @DisplayName("from reset with a buffer, an end offset, and start offset")
+    fun from_reset_with_a_buffer_an_end_offset_and_start_offset() {
+        val reader = XmlCharReader()
+        reader.reset("lorem ipsum dolor", 6, 11)
+
+        assertEquals("lorem ipsum dolor", reader.buffer)
+        assertEquals(6, reader.currentOffset)
+        assertEquals(11, reader.bufferEndOffset)
     }
 }
