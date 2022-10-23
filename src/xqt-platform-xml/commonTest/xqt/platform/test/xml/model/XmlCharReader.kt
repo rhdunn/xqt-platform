@@ -258,4 +258,27 @@ class AnXmlCharReaderCan {
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlChar(' '), reader.currentChar)
     }
+
+    @Test
+    @DisplayName("seek to a given offset")
+    fun seek_to_a_given_offset() {
+        val reader = XmlCharReader()
+        reader.reset("123 456")
+        reader.currentOffset = 4
+
+        assertEquals(4, reader.currentOffset)
+        assertEquals(XmlChar('4'), reader.currentChar)
+
+        reader.advance()
+        assertEquals(5, reader.currentOffset)
+        assertEquals(XmlChar('5'), reader.currentChar)
+
+        reader.advance()
+        assertEquals(6, reader.currentOffset)
+        assertEquals(XmlChar('6'), reader.currentChar)
+
+        reader.advance()
+        assertEquals(7, reader.currentOffset)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+    }
 }

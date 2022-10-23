@@ -32,23 +32,6 @@ class XmlCharReader {
      */
     fun advance() {
         currentOffset = nextOffset
-        if (currentOffset == bufferEndOffset) {
-            currentChar = EndOfBuffer
-            return
-        }
-
-        val high = buffer[nextOffset]
-        if (high.code in HighSurrogate && nextOffset + 1 != bufferEndOffset) {
-            val low = buffer[nextOffset + 1]
-            if (low.code in LowSurrogate) {
-                currentChar = XmlChar(high, low)
-                nextOffset += 2
-                return
-            }
-        }
-
-        currentChar = XmlChar(high)
-        nextOffset += 1
     }
 
     /**
@@ -86,7 +69,10 @@ class XmlCharReader {
      * The offset of the current XmlChar in the buffer.
      */
     var currentOffset: Int = 0
-        private set
+        set(offset) {
+            field = offset
+            updateState(offset)
+        }
 
     /**
      * The value of the current XmlChar in the buffer.
@@ -95,6 +81,27 @@ class XmlCharReader {
         private set
 
     private var nextOffset: Int = 0
+
+    private fun updateState(offset: Int) {
+        if (offset >= bufferEndOffset) {
+            currentChar = EndOfBuffer
+            nextOffset = bufferEndOffset
+            return
+        }
+
+        val high = buffer[offset]
+        if (high.code in HighSurrogate && offset + 1 != bufferEndOffset) {
+            val low = buffer[offset + 1]
+            if (low.code in LowSurrogate) {
+                currentChar = XmlChar(high, low)
+                nextOffset = offset + 2
+                return
+            }
+        }
+
+        currentChar = XmlChar(high)
+        nextOffset = offset + 1
+    }
 
     companion object {
         /**
