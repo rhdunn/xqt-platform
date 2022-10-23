@@ -7,15 +7,15 @@ The following specifications are supported:
 
 The following XML lexical constructs are supported:
 1. `Char` is modelled as an [XmlChar](commonMain/xqt/platform/xml/model/XmlChar.kt)
-   class and the `Character` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
-2. `S` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
-3. `NameStartChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
-4. `NameChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
+   class and the `Character` [character class](commonMain/xqt/platform/xml/lexer/CharacterClasses.kt).
+2. `S` [character class](commonMain/xqt/platform/xml/lexer/CharacterClasses.kt).
+3. `NameStartChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClasses.kt).
+4. `NameChar` [character class](commonMain/xqt/platform/xml/lexer/CharacterClasses.kt).
 
 The following lexical constructs are also supported:
-1. `Digit := [0-9]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
-2. `HexDigit := [0-9] | [A-F] | [a-f]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
-3. `AlphaNumeric := [0-9] | [A-Z] | [a-z]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClass.kt).
+1. `Digit := [0-9]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClasses.kt).
+2. `HexDigit := [0-9] | [A-F] | [a-f]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClasses.kt).
+3. `AlphaNumeric := [0-9] | [A-Z] | [a-z]` [character class](commonMain/xqt/platform/xml/lexer/CharacterClasses.kt).
 4. A set of ASCII character [constants](commonMain/xqt/platform/xml/lexer/Constants.kt) &ndash;
    `Colon`, `EqualsSign`, `LeftSquareBracket`, etc.
 
