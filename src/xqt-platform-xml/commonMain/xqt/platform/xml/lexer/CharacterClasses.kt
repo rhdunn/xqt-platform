@@ -110,7 +110,7 @@ object NameStartChar : CharacterClass {
 }
 
 /**
- * An XML name start character.
+ * An XML name character.
  *
  *     NameChar ::= NameStartChar
  *                | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]
