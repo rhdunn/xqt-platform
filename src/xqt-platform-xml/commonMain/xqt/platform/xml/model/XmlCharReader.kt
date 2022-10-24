@@ -80,6 +80,28 @@ class XmlCharReader {
     var currentChar: XmlChar = EndOfBuffer
         private set
 
+    /**
+     * Returns the character at the given offset from the current position.
+     *
+     * This method does not update the current offset.
+     */
+    fun peek(offset: Int): XmlChar {
+        val peekOffset = nextOffset + offset
+        if (peekOffset >= bufferEndOffset) {
+            return EndOfBuffer
+        }
+
+        val high = buffer[peekOffset]
+        if (high.code in HighSurrogate && peekOffset + 1 != bufferEndOffset) {
+            val low = buffer[peekOffset + 1]
+            if (low.code in LowSurrogate) {
+                return XmlChar(high, low)
+            }
+        }
+
+        return XmlChar(high)
+    }
+
     private var nextOffset: Int = 0
 
     private fun updateState(offset: Int) {

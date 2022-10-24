@@ -243,6 +243,136 @@ class AnXmlCharReaderCanReadXmlCharValues {
     }
 }
 
+@DisplayName("An XmlCharReader can peek at XmlChar values")
+class AnXmlCharReaderCanPeekAtXmlCharValues {
+    @Test
+    @DisplayName("from an empty buffer")
+    fun from_an_empty_buffer() {
+        val reader = XmlCharReader()
+        reader.reset("")
+
+        assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(0))
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(1))
+
+        // The current state has not been modified.
+        assertEquals(0, reader.currentOffset)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+    }
+
+    @Test
+    @DisplayName("from a sequence of ASCII characters")
+    fun from_a_sequence_of_ascii_characters() {
+        val reader = XmlCharReader()
+        reader.reset("lorem")
+
+        assertEquals(XmlChar('l'), reader.currentChar)
+        assertEquals(XmlChar('o'), reader.peek(0))
+        assertEquals(XmlChar('r'), reader.peek(1))
+        assertEquals(XmlChar('e'), reader.peek(2))
+        assertEquals(XmlChar('m'), reader.peek(3))
+
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(5))
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(6))
+
+        // The current state has not been modified.
+        assertEquals(0, reader.currentOffset)
+        assertEquals(XmlChar('l'), reader.currentChar)
+    }
+
+    @Test
+    @DisplayName("from a sequence of Basic Multilingual Plane characters")
+    fun from_a_sequence_of_basic_multilingual_plane_characters() {
+        val reader = XmlCharReader()
+        reader.reset("\u0301\u0303\u0304")
+
+        assertEquals(XmlChar(0x0301), reader.currentChar)
+        assertEquals(XmlChar(0x0303), reader.peek(0))
+        assertEquals(XmlChar(0x0304), reader.peek(1))
+
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(2))
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(3))
+
+        // The current state has not been modified.
+        assertEquals(0, reader.currentOffset)
+        assertEquals(XmlChar(0x0301), reader.currentChar)
+    }
+
+    @Test
+    @DisplayName("from a sequence of Supplementary Multilingual Plane characters")
+    fun from_a_sequence_of_supplementary_multilingual_plane_characters() {
+        val reader = XmlCharReader()
+        reader.reset("\uD83D\uDE01\uD83D\uDE03\uD83D\uDE04")
+
+        assertEquals(XmlChar(0x1F601), reader.currentChar)
+        assertEquals(XmlChar(0x1F603), reader.peek(0))
+        assertEquals(XmlChar(0x1F604), reader.peek(2))
+
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(4))
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(6))
+
+        // The current state has not been modified.
+        assertEquals(0, reader.currentOffset)
+        assertEquals(XmlChar(0x1F601), reader.currentChar)
+    }
+
+    @Test
+    @DisplayName("from a sequence of high surrogate codepoints")
+    fun from_a_sequence_of_high_surrogate_codepoints() {
+        val reader = XmlCharReader()
+        reader.reset("\uD801\uD803\uD804")
+
+        assertEquals(XmlChar(0xD801), reader.currentChar)
+        assertEquals(XmlChar(0xD803), reader.peek(0))
+        assertEquals(XmlChar(0xD804), reader.peek(1))
+
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(2))
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(3))
+
+        // The current state has not been modified.
+        assertEquals(0, reader.currentOffset)
+        assertEquals(XmlChar(0xD801), reader.currentChar)
+    }
+
+    @Test
+    @DisplayName("from a sequence of low surrogate codepoints")
+    fun from_a_sequence_of_low_surrogate_codepoints() {
+        val reader = XmlCharReader()
+        reader.reset("\uDC01\uDC03\uDC04")
+
+        assertEquals(XmlChar(0xDC01), reader.currentChar)
+        assertEquals(XmlChar(0xDC03), reader.peek(0))
+        assertEquals(XmlChar(0xDC04), reader.peek(1))
+
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(2))
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(3))
+
+        // The current state has not been modified.
+        assertEquals(0, reader.currentOffset)
+        assertEquals(XmlChar(0xDC01), reader.currentChar)
+    }
+
+    @Test
+    @DisplayName("from a given range")
+    fun from_a_given_range() {
+        val reader = XmlCharReader()
+        reader.reset("lorem ipsum dolor", 6, 11)
+
+        assertEquals(XmlChar('i'), reader.currentChar)
+        assertEquals(XmlChar('p'), reader.peek(0))
+        assertEquals(XmlChar('s'), reader.peek(1))
+        assertEquals(XmlChar('u'), reader.peek(2))
+        assertEquals(XmlChar('m'), reader.peek(3))
+
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(4))
+        assertEquals(XmlCharReader.EndOfBuffer, reader.peek(5))
+
+        // The current state has not been modified.
+        assertEquals(6, reader.currentOffset)
+        assertEquals(XmlChar('i'), reader.currentChar)
+    }
+}
+
 @DisplayName("An XmlCharReader can")
 class AnXmlCharReaderCan {
     @Test
