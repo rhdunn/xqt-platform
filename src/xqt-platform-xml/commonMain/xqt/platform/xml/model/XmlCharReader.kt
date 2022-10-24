@@ -81,6 +81,14 @@ class XmlCharReader {
         private set
 
     /**
+     * Returns the next character that would be read from the advance method.
+     *
+     * This method does not update the current offset.
+     */
+    val nextChar: XmlChar
+        get() = peek(0)
+
+    /**
      * Returns the character at the given offset from the current position.
      *
      * This method does not update the current offset.

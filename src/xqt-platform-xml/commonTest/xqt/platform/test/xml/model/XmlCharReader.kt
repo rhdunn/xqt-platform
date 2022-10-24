@@ -64,10 +64,12 @@ class AnXmlCharReaderCanReadXmlCharValues {
 
         assertEquals(0, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(0, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
     }
 
     @Test
@@ -78,30 +80,37 @@ class AnXmlCharReaderCanReadXmlCharValues {
 
         assertEquals(0, reader.currentOffset)
         assertEquals(XmlChar('l'), reader.currentChar)
+        assertEquals(XmlChar('o'), reader.nextChar)
 
         reader.advance()
         assertEquals(1, reader.currentOffset)
         assertEquals(XmlChar('o'), reader.currentChar)
+        assertEquals(XmlChar('r'), reader.nextChar)
 
         reader.advance()
         assertEquals(2, reader.currentOffset)
         assertEquals(XmlChar('r'), reader.currentChar)
+        assertEquals(XmlChar('e'), reader.nextChar)
 
         reader.advance()
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlChar('e'), reader.currentChar)
+        assertEquals(XmlChar('m'), reader.nextChar)
 
         reader.advance()
         assertEquals(4, reader.currentOffset)
         assertEquals(XmlChar('m'), reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(5, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(5, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
     }
 
     @Test
@@ -112,22 +121,27 @@ class AnXmlCharReaderCanReadXmlCharValues {
 
         assertEquals(0, reader.currentOffset)
         assertEquals(XmlChar(0x0301), reader.currentChar)
+        assertEquals(XmlChar(0x0303), reader.nextChar)
 
         reader.advance()
         assertEquals(1, reader.currentOffset)
         assertEquals(XmlChar(0x0303), reader.currentChar)
+        assertEquals(XmlChar(0x0304), reader.nextChar)
 
         reader.advance()
         assertEquals(2, reader.currentOffset)
         assertEquals(XmlChar(0x0304), reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
     }
 
     @Test
@@ -138,22 +152,27 @@ class AnXmlCharReaderCanReadXmlCharValues {
 
         assertEquals(0, reader.currentOffset)
         assertEquals(XmlChar(0x1F601), reader.currentChar)
+        assertEquals(XmlChar(0x1F603), reader.nextChar)
 
         reader.advance()
         assertEquals(2, reader.currentOffset)
         assertEquals(XmlChar(0x1F603), reader.currentChar)
+        assertEquals(XmlChar(0x1F604), reader.nextChar)
 
         reader.advance()
         assertEquals(4, reader.currentOffset)
         assertEquals(XmlChar(0x1F604), reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(6, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(6, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
     }
 
     @Test
@@ -164,22 +183,27 @@ class AnXmlCharReaderCanReadXmlCharValues {
 
         assertEquals(0, reader.currentOffset)
         assertEquals(XmlChar(0xD801), reader.currentChar)
+        assertEquals(XmlChar(0xD803), reader.nextChar)
 
         reader.advance()
         assertEquals(1, reader.currentOffset)
         assertEquals(XmlChar(0xD803), reader.currentChar)
+        assertEquals(XmlChar(0xD804), reader.nextChar)
 
         reader.advance()
         assertEquals(2, reader.currentOffset)
         assertEquals(XmlChar(0xD804), reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
     }
 
     @Test
@@ -190,22 +214,27 @@ class AnXmlCharReaderCanReadXmlCharValues {
 
         assertEquals(0, reader.currentOffset)
         assertEquals(XmlChar(0xDC01), reader.currentChar)
+        assertEquals(XmlChar(0xDC03), reader.nextChar)
 
         reader.advance()
         assertEquals(1, reader.currentOffset)
         assertEquals(XmlChar(0xDC03), reader.currentChar)
+        assertEquals(XmlChar(0xDC04), reader.nextChar)
 
         reader.advance()
         assertEquals(2, reader.currentOffset)
         assertEquals(XmlChar(0xDC04), reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
     }
 
     @Test
@@ -216,30 +245,37 @@ class AnXmlCharReaderCanReadXmlCharValues {
 
         assertEquals(6, reader.currentOffset)
         assertEquals(XmlChar('i'), reader.currentChar)
+        assertEquals(XmlChar('p'), reader.nextChar)
 
         reader.advance()
         assertEquals(7, reader.currentOffset)
         assertEquals(XmlChar('p'), reader.currentChar)
+        assertEquals(XmlChar('s'), reader.nextChar)
 
         reader.advance()
         assertEquals(8, reader.currentOffset)
         assertEquals(XmlChar('s'), reader.currentChar)
+        assertEquals(XmlChar('u'), reader.nextChar)
 
         reader.advance()
         assertEquals(9, reader.currentOffset)
         assertEquals(XmlChar('u'), reader.currentChar)
+        assertEquals(XmlChar('m'), reader.nextChar)
 
         reader.advance()
         assertEquals(10, reader.currentOffset)
         assertEquals(XmlChar('m'), reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(11, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
 
         reader.advance()
         assertEquals(11, reader.currentOffset)
         assertEquals(XmlCharReader.EndOfBuffer, reader.currentChar)
+        assertEquals(XmlCharReader.EndOfBuffer, reader.nextChar)
     }
 }
 
