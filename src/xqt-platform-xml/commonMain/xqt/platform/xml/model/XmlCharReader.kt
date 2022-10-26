@@ -54,6 +54,16 @@ class XmlCharReader {
     }
 
     /**
+     * Advances to the next XmlChar in the buffer that matches the predicate.
+     *
+     * This can be used to implement `Char - T` constructs in lexical tokens.
+     */
+    fun advanceUntil(predicate: (XmlChar) -> Boolean) {
+        while (!predicate(currentChar))
+            advance()
+    }
+
+    /**
      * The underlying UTF-16 character sequence.
      */
     var buffer: CharSequence = ""

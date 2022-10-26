@@ -3,6 +3,7 @@ package xqt.platform.test.xml.model
 
 import kotlinx.test.DisplayName
 import xqt.platform.xml.lexer.Digit
+import xqt.platform.xml.lexer.Space
 import xqt.platform.xml.model.XmlChar
 import xqt.platform.xml.model.XmlCharReader
 import kotlin.test.Test
@@ -421,6 +422,20 @@ class AnXmlCharReaderCan {
         assertEquals(XmlChar('1'), reader.currentChar)
 
         reader.advanceWhile { it in Digit }
+        assertEquals(3, reader.currentOffset)
+        assertEquals(XmlChar(' '), reader.currentChar)
+    }
+
+    @Test
+    @DisplayName("read all characters not matching a predicate")
+    fun read_all_characters_not_matching_a_predicate() {
+        val reader = XmlCharReader()
+        reader.reset("123 456")
+
+        assertEquals(0, reader.currentOffset)
+        assertEquals(XmlChar('1'), reader.currentChar)
+
+        reader.advanceUntil { it == Space }
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlChar(' '), reader.currentChar)
     }
