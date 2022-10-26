@@ -6,6 +6,8 @@ code analysis and IDE tools.
 The XQT platform consists of the following libraries:
 1. [XQT platform XML](src/xqt-platform-xml/README.md) &ndash; A common set of
    XML types.
+2. [XQT platform XPath](src/xqt-platform-xpath/README.md) &ndash; Support for
+   the XML Path (XPath) language.
 
 ## Design Documentation
 1. [Lexer](docs/design/lexer.md)
