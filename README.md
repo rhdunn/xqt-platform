@@ -7,6 +7,9 @@ The XQT platform consists of the following libraries:
 1. [XQT platform XML](src/xqt-platform-xml/README.md) &ndash; A common set of
    XML types.
 
+## Design Documentation
+1. [Lexer](docs/design/lexer.md)
+
 ## License
 Copyright (C) 2022 Reece H. Dunn
 
