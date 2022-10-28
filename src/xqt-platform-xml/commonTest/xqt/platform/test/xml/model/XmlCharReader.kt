@@ -2,7 +2,7 @@
 package xqt.platform.test.xml.model
 
 import kotlinx.test.DisplayName
-import xqt.platform.xml.lexer.Digit
+import xqt.platform.xml.lexer.Digits
 import xqt.platform.xml.lexer.Space
 import xqt.platform.xml.model.XmlChar
 import xqt.platform.xml.model.XmlCharReader
@@ -421,7 +421,7 @@ class AnXmlCharReaderCan {
         assertEquals(0, reader.currentOffset)
         assertEquals(XmlChar('1'), reader.currentChar)
 
-        reader.advanceWhile { it in Digit }
+        reader.advanceWhile { it in Digits }
         assertEquals(3, reader.currentOffset)
         assertEquals(XmlChar(' '), reader.currentChar)
     }

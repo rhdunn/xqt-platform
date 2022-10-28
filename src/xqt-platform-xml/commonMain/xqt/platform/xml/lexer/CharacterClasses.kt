@@ -2,11 +2,13 @@
 package xqt.platform.xml.lexer
 
 /**
- * An ASCII digit.
+ * ASCII digits.
  *
- *     Digit := [0-9]
+ *     Digits := [0-9]+
+ *
+ * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Digits">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Digits</a>
  */
-object Digit : CharacterClass {
+object Digits : CharacterClass {
     private val range = '0'.code..'9'.code
 
     override fun contains(c: Int): Boolean = c in range

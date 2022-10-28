@@ -13,13 +13,13 @@ class CharacterClassesSupportTestingIfAnXmlCharBelongsTo {
     @Test
     @DisplayName("the Digit character class")
     fun the_digit_character_class() {
-        assertTrue(XmlChar('0') in Digit)
-        assertTrue(XmlChar('5') in Digit)
-        assertTrue(XmlChar('9') in Digit)
+        assertTrue(XmlChar('0') in Digits)
+        assertTrue(XmlChar('5') in Digits)
+        assertTrue(XmlChar('9') in Digits)
 
-        assertFalse(XmlChar('a') in Digit)
-        assertFalse(XmlChar('A') in Digit)
-        assertFalse(XmlChar('=') in Digit)
+        assertFalse(XmlChar('a') in Digits)
+        assertFalse(XmlChar('A') in Digits)
+        assertFalse(XmlChar('=') in Digits)
     }
 
     @Test
