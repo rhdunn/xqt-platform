@@ -25,23 +25,23 @@ class CharacterClassesSupportTestingIfAnXmlCharBelongsTo {
     @Test
     @DisplayName("the HexDigit character class")
     fun the_hex_digit_character_class() {
-        assertTrue(XmlChar('0') in HexDigit)
-        assertTrue(XmlChar('5') in HexDigit)
-        assertTrue(XmlChar('9') in HexDigit)
+        assertTrue(XmlChar('0') in HexDigits)
+        assertTrue(XmlChar('5') in HexDigits)
+        assertTrue(XmlChar('9') in HexDigits)
 
-        assertTrue(XmlChar('a') in HexDigit)
-        assertTrue(XmlChar('c') in HexDigit)
-        assertTrue(XmlChar('f') in HexDigit)
-        assertFalse(XmlChar('g') in HexDigit)
-        assertFalse(XmlChar('z') in HexDigit)
+        assertTrue(XmlChar('a') in HexDigits)
+        assertTrue(XmlChar('c') in HexDigits)
+        assertTrue(XmlChar('f') in HexDigits)
+        assertFalse(XmlChar('g') in HexDigits)
+        assertFalse(XmlChar('z') in HexDigits)
 
-        assertTrue(XmlChar('A') in HexDigit)
-        assertTrue(XmlChar('C') in HexDigit)
-        assertTrue(XmlChar('F') in HexDigit)
-        assertFalse(XmlChar('G') in HexDigit)
-        assertFalse(XmlChar('Z') in HexDigit)
+        assertTrue(XmlChar('A') in HexDigits)
+        assertTrue(XmlChar('C') in HexDigits)
+        assertTrue(XmlChar('F') in HexDigits)
+        assertFalse(XmlChar('G') in HexDigits)
+        assertFalse(XmlChar('Z') in HexDigits)
 
-        assertFalse(XmlChar('=') in HexDigit)
+        assertFalse(XmlChar('=') in HexDigits)
     }
 
     @Test

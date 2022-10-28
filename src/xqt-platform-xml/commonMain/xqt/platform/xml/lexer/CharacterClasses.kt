@@ -15,11 +15,11 @@ object Digits : CharacterClass {
 }
 
 /**
- * A hexadecimal digit.
+ * Hexadecimal digits.
  *
- *     HexDigit := [0-9] | [A-F] | [a-f]
+ *     HexDigits := ([0-9] | [A-F] | [a-f])+
  */
-object HexDigit : CharacterClass {
+object HexDigits : CharacterClass {
     private val digit = '0'.code..'9'.code
     private val lower = 'a'.code..'f'.code
     private val upper = 'A'.code..'F'.code
