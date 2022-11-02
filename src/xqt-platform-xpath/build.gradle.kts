@@ -55,6 +55,9 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             kotlin.srcDir("commonMain")
+            dependencies {
+                implementation(project(":src:xqt-platform-xml"))
+            }
         }
         val commonTest by getting {
             kotlin.srcDir("commonTest")
