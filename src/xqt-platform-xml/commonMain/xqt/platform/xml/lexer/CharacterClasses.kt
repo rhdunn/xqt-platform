@@ -6,7 +6,7 @@ package xqt.platform.xml.lexer
  *
  *     Digits := [0-9]+
  *
- * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Digits">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Digits</a>
+ * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Digits">REC-xpath-19991116/#NT-Digits</a>
  */
 object Digits : CharacterClass {
     private val range = '0'.code..'9'.code
@@ -48,7 +48,7 @@ object AlphaNumeric : CharacterClass {
  *           | [#xE000-#xFFFD]
  *           | [#x10000-#x10FFFF]
  *
- * @see <a href="https://www.w3.org/TR/REC-xml/#NT-Char">https://www.w3.org/TR/REC-xml/#NT-Char</a>
+ * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">REC-xml-20081126/#NT-Char</a>
  */
 object Character : CharacterClass {
     override fun contains(c: Int): Boolean = when {
@@ -65,7 +65,7 @@ object Character : CharacterClass {
  *
  *     S := [#x20] | [#x9] | [#xD] | [#xA]
  *
- * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S">https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S</a>
+ * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S">REC-xml-20081126/#NT-S</a>
  */
 object S : CharacterClass {
     private const val HT = 0x09 // U+0009 CHARACTER TABULATION
@@ -89,7 +89,7 @@ object S : CharacterClass {
  *                     | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD]
  *                     | [#x10000-#xEFFFF]
  *
- * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameStartChar">https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameStartChar</a>
+ * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameStartChar">REC-xml-20081126/#NT-NameStartChar</a>
  */
 object NameStartChar : CharacterClass {
     private val ascii_lower = 'a'.code .. 'z'.code
@@ -124,8 +124,8 @@ object NameStartChar : CharacterClass {
  *                     | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD]
  *                     | [#x10000-#xEFFFF]
  *
- * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameChar">https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameChar</a>
- * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameStartChar">https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameStartChar</a>
+ * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameChar">REC-xml-20081126/#NT-NameChar</a>
+ * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameStartChar">REC-xml-20081126/#NT-NameStartChar</a>
  */
 object NameChar : CharacterClass {
     private val symbols = setOf('-'.code, '.'.code, ':'.code, '_'.code)
