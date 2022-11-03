@@ -1,6 +1,7 @@
 // Copyright (C) 2022 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 package xqt.platform.xpath.v1.lexer.tokens
 
+import xqt.platform.xml.lexer.tokens.KeywordTokenType
 import xqt.platform.xml.lexer.tokens.NCNameTokenType
 import xqt.platform.xml.lexer.tokens.SymbolTokenType
 import xqt.platform.xml.lexer.tokens.TerminalSymbolTokenType
@@ -320,7 +321,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KAncestor: TerminalSymbolTokenType
+    val KAncestor: KeywordTokenType
 
     /**
      * The `ancestor-or-self` keyword token.
@@ -329,7 +330,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KAncestorOrSelf: TerminalSymbolTokenType
+    val KAncestorOrSelf: KeywordTokenType
 
     /**
      * The `and` keyword token.
@@ -339,7 +340,7 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AndExpr">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AndExpr</a>
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName</a>
      */
-    val KAnd: TerminalSymbolTokenType
+    val KAnd: KeywordTokenType
 
     /**
      * The `attribute` keyword token.
@@ -348,7 +349,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KAttribute: TerminalSymbolTokenType
+    val KAttribute: KeywordTokenType
 
     /**
      * The `child` keyword token.
@@ -357,7 +358,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KChild: TerminalSymbolTokenType
+    val KChild: KeywordTokenType
 
     /**
      * The `comment` keyword token.
@@ -366,7 +367,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType</a>
      */
-    val KComment: TerminalSymbolTokenType
+    val KComment: KeywordTokenType
 
     /**
      * The `descendant` keyword token.
@@ -375,7 +376,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KDescendant: TerminalSymbolTokenType
+    val KDescendant: KeywordTokenType
 
     /**
      * The `descendant-or-self` keyword token.
@@ -384,7 +385,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KDescendantOrSelf: TerminalSymbolTokenType
+    val KDescendantOrSelf: KeywordTokenType
 
     /**
      * The `div` keyword token.
@@ -394,7 +395,7 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplicativeExpr">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplicativeExpr</a>
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName</a>
      */
-    val KDiv: TerminalSymbolTokenType
+    val KDiv: KeywordTokenType
 
     /**
      * The `following` keyword token.
@@ -403,7 +404,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KFollowing: TerminalSymbolTokenType
+    val KFollowing: KeywordTokenType
 
     /**
      * The `following-sibling` keyword token.
@@ -412,7 +413,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KFollowingSibling: TerminalSymbolTokenType
+    val KFollowingSibling: KeywordTokenType
 
     /**
      * The `mod` keyword token.
@@ -422,7 +423,7 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplicativeExpr">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplicativeExpr</a>
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName</a>
      */
-    val KMod: TerminalSymbolTokenType
+    val KMod: KeywordTokenType
 
     /**
      * The `namespace` keyword token.
@@ -431,7 +432,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KNamespace: TerminalSymbolTokenType
+    val KNamespace: KeywordTokenType
 
     /**
      * The `node` keyword token.
@@ -440,7 +441,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType</a>
      */
-    val KNode: TerminalSymbolTokenType
+    val KNode: KeywordTokenType
 
     /**
      * The `or` keyword token.
@@ -450,7 +451,7 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OrExpr">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OrExpr</a>
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName</a>
      */
-    val KOr: TerminalSymbolTokenType
+    val KOr: KeywordTokenType
 
     /**
      * The `parent` keyword token.
@@ -459,7 +460,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KParent: TerminalSymbolTokenType
+    val KParent: KeywordTokenType
 
     /**
      * The `preceding` keyword token.
@@ -468,7 +469,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KPreceding: TerminalSymbolTokenType
+    val KPreceding: KeywordTokenType
 
     /**
      * The `preceding-sibling` keyword token.
@@ -477,7 +478,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KPrecedingSibling: TerminalSymbolTokenType
+    val KPrecedingSibling: KeywordTokenType
 
     /**
      * The `processing-instruction` keyword token.
@@ -487,7 +488,7 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeTest">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeTest</a>
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType</a>
      */
-    val KProcessingInstruction: TerminalSymbolTokenType
+    val KProcessingInstruction: KeywordTokenType
 
     /**
      * The `self` keyword token.
@@ -496,7 +497,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName</a>
      */
-    val KSelf: TerminalSymbolTokenType
+    val KSelf: KeywordTokenType
 
     /**
      * The `text` keyword token.
@@ -505,5 +506,5 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType</a>
      */
-    val KText: TerminalSymbolTokenType
+    val KText: KeywordTokenType
 }
