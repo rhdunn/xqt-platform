@@ -191,6 +191,15 @@ interface XPath10TokenProvider {
     val Plus: SymbolTokenType
 
     /**
+     * The prefixed name separator token ("`:`").
+     *
+     *     PrefixedNameSeparatorToken ::= ":"
+     *
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName</a>
+     */
+    val PrefixedNameSeparator: SymbolTokenType
+
+    /**
      * The square bracket close token ("`]`").
      *
      *     SquareBracketCloseToken ::= "]"
