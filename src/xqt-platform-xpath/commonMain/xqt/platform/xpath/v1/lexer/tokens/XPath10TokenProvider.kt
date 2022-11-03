@@ -263,8 +263,16 @@ interface XPath10TokenProvider {
      *     Name   ::= NameStartChar NameChar*
      *     NCName ::= Name - (Char* ':' Char*)
      *
+     * __Note:__ This matches the `UnprefixedName` variant of `QName` values:
+     *
+     *     UnprefixedName ::= LocalPart
+     *     LocalPart      ::= NCName
+     *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-NCName">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-NCName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-UnprefixedName">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-UnprefixedName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-LocalPart">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-LocalPart</a>
      */
     val NCName: NCNameTokenType
 
@@ -279,23 +287,21 @@ interface XPath10TokenProvider {
     val Number: TerminalSymbolTokenType
 
     /**
-     * The qualified name token (`QName`).
+     * A prefixed name token (`PrefixedName`).
      *
-     *     QName          ::= PrefixedName
-     *                      | UnprefixedName
      *     PrefixedName   ::= Prefix ":" LocalPart
-     *     UnprefixedName ::= LocalPart
      *     Prefix         ::= NCName
      *     LocalPart      ::= NCName
+     *
+     * __Note:__ This matches the `PrefixedName` variant of `QName` values.
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-UnprefixedName">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-UnprefixedName</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-Prefix">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-Prefix</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-LocalPart">https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-LocalPart</a>
      */
-    val QName: TerminalSymbolTokenType
+    val PrefixedName: TerminalSymbolTokenType
 
     /**
      * The whitespace token (`S`).
