@@ -75,6 +75,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SingleType">REC-xpath20-20101214/#doc-xpath-SingleType</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentPlaceholder">REC-xpath-30-20140408/#doc-xpath30-ArgumentPlaceholder</a>
      */
     val QuestionMark: SymbolTokenType
 
@@ -161,6 +162,9 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TreatExpr">REC-xpath20-20101214/#doc-xpath-TreatExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastableExpr">REC-xpath20-20101214/#doc-xpath-CastableExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastExpr">REC-xpath20-20101214/#doc-xpath-CastExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypeDeclaration">REC-xpath-30-20140408/#doc-xpath30-TypeDeclaration</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest</a>
      */
     val KAs: KeywordTokenType
 
@@ -297,6 +301,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">REC-xpath20-20101214/#doc-xpath-SimpleForClause</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">REC-xpath20-20101214/#doc-xpath-QuantifiedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding">REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding</a>
      */
     val KIn: KeywordTokenType
 
@@ -378,6 +383,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *     KReturnToken ::= "return"
      *
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForExpr">REC-xpath20-20101214/#doc-xpath-ForExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-LetExpr">REC-xpath-30-20140408/#doc-xpath30-LetExpr</a>
      */
     val KReturn: KeywordTokenType
 
