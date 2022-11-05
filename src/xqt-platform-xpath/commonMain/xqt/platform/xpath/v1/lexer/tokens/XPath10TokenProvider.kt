@@ -405,7 +405,7 @@ interface XPath10TokenProvider {
      *     S ::= (#x20 | #x9 | #xD | #xA)+
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprWhitespace">REC-xpath-19991116/#NT-ExprWhitespace</a>
-     * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S">REC-xml-20081126/#NT-S</a>
+     * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S">XML 1.0 (REC) S</a>
      */
     val S: TerminalSymbolTokenType
 

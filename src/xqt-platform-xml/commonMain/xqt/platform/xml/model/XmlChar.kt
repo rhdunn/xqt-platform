@@ -8,7 +8,7 @@ import kotlin.jvm.JvmInline
  *
  * @param codepoint The unicode codepoint for this XML character.
  *
- * @see <a href="http://www.w3.org/TR/REC-xml/#NT-Char">http://www.w3.org/TR/REC-xml/#NT-Char</a>
+ * @see <a href="http://www.w3.org/TR/REC-xml/#NT-Char">XML 1.0 (REC) Char</a>
  */
 @JvmInline
 value class XmlChar(val codepoint: Int) : Comparable<XmlChar> {
