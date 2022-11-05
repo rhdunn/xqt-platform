@@ -9,7 +9,7 @@ import xqt.platform.xml.lexer.tokens.TerminalSymbolTokenType
 /**
  * The tokens present in the XPath 1.0 grammar.
  *
- * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116">REC-xpath-19991116</a>
+ * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0 (REC)</a>
  */
 @Suppress("PropertyName")
 interface XPath10TokenProvider {
@@ -18,8 +18,8 @@ interface XPath10TokenProvider {
      *
      *     AbbrevAttributeToken ::= "@"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedAxisSpecifier">REC-xpath-19991116/#NT-AbbreviatedAxisSpecifier</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedAxisSpecifier">XPath 1.0 (REC) AbbreviatedAxisSpecifier</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AbbrevForwardStep">REC-xpath20-20101214/#doc-xpath-AbbrevForwardStep</a>
      */
     val AbbrevAttribute: SymbolTokenType
@@ -29,10 +29,10 @@ interface XPath10TokenProvider {
      *
      *     AbbrevDescendantOrSelfToken ::= "//"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedAbsoluteLocationPath">REC-xpath-19991116/#NT-AbbreviatedAbsoluteLocationPath</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedRelativeLocationPath">REC-xpath-19991116/#NT-AbbreviatedRelativeLocationPath</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-PathExpr">REC-xpath-19991116/#NT-PathExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedAbsoluteLocationPath">XPath 1.0 (REC) AbbreviatedAbsoluteLocationPath</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedRelativeLocationPath">XPath 1.0 (REC) AbbreviatedRelativeLocationPath</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-PathExpr">XPath 1.0 (REC) PathExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-RelativePathExpr">REC-xpath20-20101214/#doc-xpath-RelativePathExpr</a>
      */
     val AbbrevDescendantOrSelf: SymbolTokenType
@@ -42,8 +42,8 @@ interface XPath10TokenProvider {
      *
      *     AbbrevParentToken ::= ".."
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedStep">REC-xpath-19991116/#NT-AbbreviatedStep</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedStep">XPath 1.0 (REC) AbbreviatedStep</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AbbrevReverseStep">REC-xpath20-20101214/#doc-xpath-AbbrevReverseStep</a>
      */
     val AbbrevParent: SymbolTokenType
@@ -53,8 +53,8 @@ interface XPath10TokenProvider {
      *
      *     AxisSeparatorToken ::= "::"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisSpecifier">REC-xpath-19991116/#NT-AxisSpecifier</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisSpecifier">XPath 1.0 (REC) AxisSpecifier</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">REC-xpath20-20101214/#doc-xpath-ReverseAxis</a>
      */
@@ -65,7 +65,7 @@ interface XPath10TokenProvider {
      *
      *     ColonToken ::= ":"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">XPath 1.0 (REC) NameTest</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">Namespaces in XML 1.0 (REC) PrefixedName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Wildcard">REC-xpath20-20101214/#doc-xpath-Wildcard</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
@@ -77,8 +77,8 @@ interface XPath10TokenProvider {
      *
      *     CommaToken ::= ","
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-FunctionCall">REC-xpath-19991116/#NT-FunctionCall</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-FunctionCall">XPath 1.0 (REC) FunctionCall</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Expr">REC-xpath20-20101214/#doc-xpath-Expr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">REC-xpath20-20101214/#doc-xpath-SimpleForClause</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">REC-xpath20-20101214/#doc-xpath-QuantifiedExpr</a>
@@ -99,8 +99,8 @@ interface XPath10TokenProvider {
      *
      *     ContextItemToken ::= "."
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedStep">REC-xpath-19991116/#NT-AbbreviatedStep</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbbreviatedStep">XPath 1.0 (REC) AbbreviatedStep</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ContextItemExpr">REC-xpath20-20101214/#doc-xpath-ContextItemExpr</a>
      */
     val ContextItem: SymbolTokenType
@@ -110,8 +110,8 @@ interface XPath10TokenProvider {
      *
      *     EqualsToken ::= "="
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-EqualityExpr">REC-xpath-19991116/#NT-EqualityExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-EqualityExpr">XPath 1.0 (REC) EqualityExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">REC-xpath20-20101214/#doc-xpath-GeneralComp</a>
      */
     val Equals: SymbolTokenType
@@ -121,8 +121,8 @@ interface XPath10TokenProvider {
      *
      *     GreaterThanToken ::= ">"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelationalExpr">REC-xpath-19991116/#NT-RelationalExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelationalExpr">XPath 1.0 (REC) RelationalExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">REC-xpath20-20101214/#doc-xpath-GeneralComp</a>
      */
     val GreaterThan: SymbolTokenType
@@ -132,8 +132,8 @@ interface XPath10TokenProvider {
      *
      *     GreaterThanOrEqualsToken ::= ">="
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelationalExpr">REC-xpath-19991116/#NT-RelationalExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelationalExpr">XPath 1.0 (REC) RelationalExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">REC-xpath20-20101214/#doc-xpath-GeneralComp</a>
      */
     val GreaterThanOrEquals: SymbolTokenType
@@ -143,8 +143,8 @@ interface XPath10TokenProvider {
      *
      *     LessThanToken ::= "<"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelationalExpr">REC-xpath-19991116/#NT-RelationalExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelationalExpr">XPath 1.0 (REC) RelationalExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">REC-xpath20-20101214/#doc-xpath-GeneralComp</a>
      */
     val LessThan: SymbolTokenType
@@ -154,8 +154,8 @@ interface XPath10TokenProvider {
      *
      *     LessThanOrEqualsToken ::= "<="
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelationalExpr">REC-xpath-19991116/#NT-RelationalExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelationalExpr">XPath 1.0 (REC) RelationalExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">REC-xpath20-20101214/#doc-xpath-GeneralComp</a>
      */
     val LessThanOrEquals: SymbolTokenType
@@ -165,8 +165,8 @@ interface XPath10TokenProvider {
      *
      *     MinusToken ::= "-"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AdditiveExpr">REC-xpath-19991116/#NT-AdditiveExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AdditiveExpr">XPath 1.0 (REC) AdditiveExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-UnaryExpr">https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-UnaryExpr</a>
      */
     val Minus: SymbolTokenType
@@ -176,8 +176,8 @@ interface XPath10TokenProvider {
      *
      *     NotEqualsToken ::= "!="
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-EqualityExpr">REC-xpath-19991116/#NT-EqualityExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-EqualityExpr">XPath 1.0 (REC) EqualityExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">REC-xpath20-20101214/#doc-xpath-GeneralComp</a>
      */
     val NotEquals: SymbolTokenType
@@ -187,10 +187,10 @@ interface XPath10TokenProvider {
      *
      *     ParenthesisCloseToken ::= ")"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeTest">REC-xpath-19991116/#NT-NodeTest</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-PrimaryExpr">REC-xpath-19991116/#NT-PrimaryExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-FunctionCall">REC-xpath-19991116/#NT-FunctionCall</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeTest">XPath 1.0 (REC) NodeTest</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-PrimaryExpr">XPath 1.0 (REC) PrimaryExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-FunctionCall">XPath 1.0 (REC) FunctionCall</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">REC-xpath20-20101214/#doc-xpath-IfExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ParenthesizedExpr">REC-xpath20-20101214/#doc-xpath-ParenthesizedExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SequenceType">REC-xpath20-20101214/#doc-xpath-SequenceType</a>
@@ -222,10 +222,10 @@ interface XPath10TokenProvider {
      *
      *     ParenthesisOpenToken ::= "("
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeTest">REC-xpath-19991116/#NT-NodeTest</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-PrimaryExpr">REC-xpath-19991116/#NT-PrimaryExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-FunctionCall">REC-xpath-19991116/#NT-FunctionCall</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeTest">XPath 1.0 (REC) NodeTest</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-PrimaryExpr">XPath 1.0 (REC) PrimaryExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-FunctionCall">XPath 1.0 (REC) FunctionCall</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">REC-xpath20-20101214/#doc-xpath-IfExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ParenthesizedExpr">REC-xpath20-20101214/#doc-xpath-ParenthesizedExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SequenceType">REC-xpath20-20101214/#doc-xpath-SequenceType</a>
@@ -257,10 +257,10 @@ interface XPath10TokenProvider {
      *
      *     PathOperatorToken ::= "/"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbsoluteLocationPath">REC-xpath-19991116/#NT-AbsoluteLocationPath</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelativeLocationPath">REC-xpath-19991116/#NT-RelativeLocationPath</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-PathExpr">REC-xpath-19991116/#NT-PathExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AbsoluteLocationPath">XPath 1.0 (REC) AbsoluteLocationPath</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-RelativeLocationPath">XPath 1.0 (REC) RelativeLocationPath</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-PathExpr">XPath 1.0 (REC) PathExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-RelativePathExpr">REC-xpath20-20101214/#doc-xpath-RelativePathExpr</a>
      */
     val PathOperator: SymbolTokenType
@@ -270,8 +270,8 @@ interface XPath10TokenProvider {
      *
      *     PlusToken ::= "+"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AdditiveExpr">REC-xpath-19991116/#NT-AdditiveExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AdditiveExpr">XPath 1.0 (REC) AdditiveExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-UnaryExpr">REC-xpath20-20101214/#doc-xpath-UnaryExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator</a>
      */
@@ -282,8 +282,8 @@ interface XPath10TokenProvider {
      *
      *     SquareBracketCloseToken ::= "]"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Predicate">REC-xpath-19991116/#NT-Predicate</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Predicate">XPath 1.0 (REC) Predicate</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor">REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor</a>
      */
     val SquareBracketClose: SymbolTokenType
@@ -293,8 +293,8 @@ interface XPath10TokenProvider {
      *
      *     SquareBracketOpenToken ::= "["
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Predicate">REC-xpath-19991116/#NT-Predicate</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Predicate">XPath 1.0 (REC) Predicate</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">XPath 1.0 (REC) ExprToken</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor">REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor</a>
      */
     val SquareBracketOpen: SymbolTokenType
@@ -304,8 +304,8 @@ interface XPath10TokenProvider {
      *
      *     StarToken ::= "*"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplyOperator">REC-xpath-19991116/#NT-MultiplyOperator</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplyOperator">XPath 1.0 (REC) MultiplyOperator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">XPath 1.0 (REC) NameTest</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-MultiplicativeExpr">REC-xpath20-20101214/#doc-xpath-MultiplicativeExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Wildcard">REC-xpath20-20101214/#doc-xpath-Wildcard</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator</a>
@@ -323,8 +323,8 @@ interface XPath10TokenProvider {
      *
      *     UnionToken ::= "|"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-UnionExpr">REC-xpath-19991116/#NT-UnionExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">REC-xpath-19991116/#NT-Operator</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-UnionExpr">XPath 1.0 (REC) UnionExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Operator">XPath 1.0 (REC) Operator</a>
      */
     val Union: SymbolTokenType
 
@@ -333,7 +333,7 @@ interface XPath10TokenProvider {
      *
      *     VariableIndicatorToken ::= "$"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-VariableReference">REC-xpath-19991116/#NT-VariableReference</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-VariableReference">XPath 1.0 (REC) VariableReference</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">REC-xpath20-20101214/#doc-xpath-SimpleForClause</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">REC-xpath20-20101214/#doc-xpath-QuantifiedExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-VarRef">REC-xpath20-20101214/#doc-xpath-VarRef</a>
@@ -349,7 +349,7 @@ interface XPath10TokenProvider {
      *     Literal ::= '"' [^"]* '"'
      *               | "'" [^']* "'"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Literal">REC-xpath-19991116/#NT-Literal</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Literal">XPath 1.0 (REC) Literal</a>
      */
     val Literal: TerminalSymbolTokenType
 
@@ -364,7 +364,7 @@ interface XPath10TokenProvider {
      *     UnprefixedName ::= LocalPart
      *     LocalPart      ::= NCName
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">XPath 1.0 (REC) NameTest</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-NCName">Namespaces in XML 1.0 (REC) NCName</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName">Namespaces in XML 1.0 (REC) QName</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-UnprefixedName">Namespaces in XML 1.0 (REC) UnprefixedName</a>
@@ -378,7 +378,7 @@ interface XPath10TokenProvider {
      *     Number ::= Digits ("." Digits?)?
      *              | "." Digits
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Number">REC-xpath-19991116/#NT-Number</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Number">XPath 1.0 (REC) Number</a>
      */
     val Number: TerminalSymbolTokenType
 
@@ -391,7 +391,7 @@ interface XPath10TokenProvider {
      *
      * __Note:__ This matches the `PrefixedName` variant of `QName` values.
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">XPath 1.0 (REC) NameTest</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName">Namespaces in XML 1.0 (REC) QName</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">Namespaces in XML 1.0 (REC) PrefixedName</a>
      * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-Prefix">Namespaces in XML 1.0 (REC) Prefix</a>
@@ -404,7 +404,7 @@ interface XPath10TokenProvider {
      *
      *     S ::= (#x20 | #x9 | #xD | #xA)+
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprWhitespace">REC-xpath-19991116/#NT-ExprWhitespace</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprWhitespace">XPath 1.0 (REC) ExprWhitespace</a>
      * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S">XML 1.0 (REC) S</a>
      */
     val S: TerminalSymbolTokenType
@@ -414,7 +414,7 @@ interface XPath10TokenProvider {
      *
      *     KAncestorToken ::= "ancestor"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">REC-xpath20-20101214/#doc-xpath-ReverseAxis</a>
      */
     val KAncestor: KeywordTokenType
@@ -424,7 +424,7 @@ interface XPath10TokenProvider {
      *
      *     KAncestorOrSelfToken ::= "ancestor-or-self"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">REC-xpath20-20101214/#doc-xpath-ReverseAxis</a>
      */
     val KAncestorOrSelf: KeywordTokenType
@@ -434,8 +434,8 @@ interface XPath10TokenProvider {
      *
      *     KAndToken ::= "and"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AndExpr">REC-xpath-19991116/#NT-AndExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">REC-xpath-19991116/#NT-OperatorName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AndExpr">XPath 1.0 (REC) AndExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">XPath 1.0 (REC) OperatorName</a>
      */
     val KAnd: KeywordTokenType
 
@@ -444,7 +444,7 @@ interface XPath10TokenProvider {
      *
      *     KAttributeToken ::= "attribute"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttributeTest">REC-xpath20-20101214/#doc-xpath-AttributeTest</a>
      */
@@ -455,7 +455,7 @@ interface XPath10TokenProvider {
      *
      *     KChildToken ::= "child"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      */
     val KChild: KeywordTokenType
@@ -465,7 +465,7 @@ interface XPath10TokenProvider {
      *
      *     KCommentToken ::= "comment"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">REC-xpath-19991116/#NT-NodeType</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">XPath 1.0 (REC) NodeType</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CommentTest">REC-xpath20-20101214/#doc-xpath-CommentTest</a>
      */
     val KComment: KeywordTokenType
@@ -475,7 +475,7 @@ interface XPath10TokenProvider {
      *
      *     KDescendantToken ::= "descendant"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      */
     val KDescendant: KeywordTokenType
@@ -485,7 +485,7 @@ interface XPath10TokenProvider {
      *
      *     KDescendantOrSelfToken ::= "descendant-or-self"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      */
     val KDescendantOrSelf: KeywordTokenType
@@ -495,8 +495,8 @@ interface XPath10TokenProvider {
      *
      *     KDivToken ::= "div"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplicativeExpr">REC-xpath-19991116/#NT-MultiplicativeExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">REC-xpath-19991116/#NT-OperatorName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplicativeExpr">XPath 1.0 (REC) MultiplicativeExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">XPath 1.0 (REC) OperatorName</a>
      */
     val KDiv: KeywordTokenType
 
@@ -505,7 +505,7 @@ interface XPath10TokenProvider {
      *
      *     KFollowingToken ::= "following"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      */
     val KFollowing: KeywordTokenType
@@ -515,7 +515,7 @@ interface XPath10TokenProvider {
      *
      *     KFollowingSiblingToken ::= "following-sibling"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      */
     val KFollowingSibling: KeywordTokenType
@@ -525,8 +525,8 @@ interface XPath10TokenProvider {
      *
      *     KModToken ::= "mod"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplicativeExpr">REC-xpath-19991116/#NT-MultiplicativeExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">REC-xpath-19991116/#NT-OperatorName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-MultiplicativeExpr">XPath 1.0 (REC) MultiplicativeExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">XPath 1.0 (REC) OperatorName</a>
      */
     val KMod: KeywordTokenType
 
@@ -535,7 +535,7 @@ interface XPath10TokenProvider {
      *
      *     KNamespaceToken ::= "namespace"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      */
     val KNamespace: KeywordTokenType
@@ -545,7 +545,7 @@ interface XPath10TokenProvider {
      *
      *     KNodeToken ::= "node"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">REC-xpath-19991116/#NT-NodeType</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">XPath 1.0 (REC) NodeType</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AnyKindTest">REC-xpath20-20101214/#doc-xpath-AnyKindTest</a>
      */
     val KNode: KeywordTokenType
@@ -555,8 +555,8 @@ interface XPath10TokenProvider {
      *
      *     KOrToken ::= "or"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OrExpr">REC-xpath-19991116/#NT-OrExpr</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">REC-xpath-19991116/#NT-OperatorName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OrExpr">XPath 1.0 (REC) OrExpr</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-OperatorName">XPath 1.0 (REC) OperatorName</a>
      */
     val KOr: KeywordTokenType
 
@@ -565,7 +565,7 @@ interface XPath10TokenProvider {
      *
      *     KParentToken ::= "parent"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">REC-xpath20-20101214/#doc-xpath-ReverseAxis</a>
      */
     val KParent: KeywordTokenType
@@ -575,7 +575,7 @@ interface XPath10TokenProvider {
      *
      *     KPrecedingToken ::= "preceding"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">REC-xpath20-20101214/#doc-xpath-ReverseAxis</a>
      */
     val KPreceding: KeywordTokenType
@@ -585,7 +585,7 @@ interface XPath10TokenProvider {
      *
      *     KPrecedingSiblingToken ::= "preceding-sibling"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">REC-xpath20-20101214/#doc-xpath-ReverseAxis</a>
      */
     val KPrecedingSibling: KeywordTokenType
@@ -595,8 +595,8 @@ interface XPath10TokenProvider {
      *
      *     KProcessingInstructionToken ::= "processing-instruction"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeTest">REC-xpath-19991116/#NT-NodeTest</a>
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">REC-xpath-19991116/#NT-NodeType</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeTest">XPath 1.0 (REC) NodeTest</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">XPath 1.0 (REC) NodeType</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-PITest">REC-xpath20-20101214/#doc-xpath-PITest</a>
      */
     val KProcessingInstruction: KeywordTokenType
@@ -606,7 +606,7 @@ interface XPath10TokenProvider {
      *
      *     KSelfToken ::= "self"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">REC-xpath-19991116/#NT-AxisName</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-AxisName">XPath 1.0 (REC) AxisName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">REC-xpath20-20101214/#doc-xpath-ForwardAxis</a>
      */
     val KSelf: KeywordTokenType
@@ -616,7 +616,7 @@ interface XPath10TokenProvider {
      *
      *     KTextToken ::= "text"
      *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">REC-xpath-19991116/#NT-NodeType</a>
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">XPath 1.0 (REC) NodeType</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TextTest">REC-xpath20-20101214/#doc-xpath-TextTest</a>
      */
     val KText: KeywordTokenType

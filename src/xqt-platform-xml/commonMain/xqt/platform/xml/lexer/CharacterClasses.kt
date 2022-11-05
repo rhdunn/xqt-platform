@@ -6,7 +6,7 @@ package xqt.platform.xml.lexer
  *
  *     Digits := [0-9]+
  *
- * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Digits">REC-xpath-19991116/#NT-Digits</a>
+ * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Digits">XPath 1.0 (REC) Digits</a>
  */
 object Digits : CharacterClass {
     private val range = '0'.code..'9'.code
