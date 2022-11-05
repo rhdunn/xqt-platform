@@ -61,6 +61,18 @@ interface XPath10TokenProvider {
     val AxisSeparator: SymbolTokenType
 
     /**
+     * The colon token ("`:`").
+     *
+     *     ColonToken ::= ":"
+     *
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">REC-xml-names-20091208/#NT-PrefixedName</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Wildcard">REC-xpath20-20101214/#doc-xpath-Wildcard</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
+     */
+    val Colon: SymbolTokenType
+
+    /**
      * The comma token ("`,`").
      *
      *     CommaToken ::= ","
@@ -76,6 +88,9 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause">REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">REC-xpath-30-20140408/#doc-xpath30-ArgumentList</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor">REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedMapTest">REC-xpath-31-20170321/#doc-xpath31-TypedMapTest</a>
      */
     val Comma: SymbolTokenType
 
@@ -195,6 +210,10 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType">REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyMapTest">REC-xpath-31-20170321/#doc-xpath31-AnyMapTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedMapTest">REC-xpath-31-20170321/#doc-xpath31-TypedMapTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest">REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedArrayTest">REC-xpath-31-20170321/#doc-xpath31-TypedArrayTest</a>
      */
     val ParenthesisClose: SymbolTokenType
 
@@ -226,6 +245,10 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType">REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyMapTest">REC-xpath-31-20170321/#doc-xpath31-AnyMapTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedMapTest">REC-xpath-31-20170321/#doc-xpath31-TypedMapTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest">REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedArrayTest">REC-xpath-31-20170321/#doc-xpath31-TypedArrayTest</a>
      */
     val ParenthesisOpen: SymbolTokenType
 
@@ -255,23 +278,13 @@ interface XPath10TokenProvider {
     val Plus: SymbolTokenType
 
     /**
-     * The prefixed name separator token ("`:`").
-     *
-     *     PrefixedNameSeparatorToken ::= ":"
-     *
-     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">REC-xml-names-20091208/#NT-PrefixedName</a>
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Wildcard">REC-xpath20-20101214/#doc-xpath-Wildcard</a>
-     */
-    val PrefixedNameSeparator: SymbolTokenType
-
-    /**
      * The square bracket close token ("`]`").
      *
      *     SquareBracketCloseToken ::= "]"
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Predicate">REC-xpath-19991116/#NT-Predicate</a>
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor">REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor</a>
      */
     val SquareBracketClose: SymbolTokenType
 
@@ -282,6 +295,7 @@ interface XPath10TokenProvider {
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Predicate">REC-xpath-19991116/#NT-Predicate</a>
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-ExprToken">REC-xpath-19991116/#NT-ExprToken</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor">REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor</a>
      */
     val SquareBracketOpen: SymbolTokenType
 
@@ -298,6 +312,9 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttribNameOrWildcard">REC-xpath20-20101214/#doc-xpath-AttribNameOrWildcard</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementNameOrWildcard">REC-xpath20-20101214/#doc-xpath-ElementNameOrWildcard</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-KeySpecifier">REC-xpath-31-20170321/#doc-xpath31-KeySpecifier</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyMapTest">REC-xpath-31-20170321/#doc-xpath31-AnyMapTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest">REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest</a>
      */
     val Star: SymbolTokenType
 
