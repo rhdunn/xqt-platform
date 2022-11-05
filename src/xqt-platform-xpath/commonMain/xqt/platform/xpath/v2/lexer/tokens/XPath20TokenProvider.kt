@@ -9,8 +9,8 @@ import xqt.platform.xpath.v1.lexer.tokens.XPath10TokenProvider
 /**
  * The tokens present in the XPath 2.0 grammar.
  *
- * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#id-grammar">REC-xpath20-20101214/#id-grammar</a>
- * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#terminal-symbols">REC-xpath20-20101214/#terminal-symbols</a>
+ * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#id-grammar">XPath 2.0 (REC) EBNF</a>
+ * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#terminal-symbols">XPath 2.0 (REC) Terminal Symbols</a>
  */
 @Suppress("PropertyName")
 interface XPath20TokenProvider : XPath10TokenProvider {
@@ -19,7 +19,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     CommentCloseToken ::= ":)"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Comment">REC-xpath20-20101214/#doc-xpath-Comment</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Comment">XPath 2.0 (REC) Comment</a>
      */
     val CommentClose: SymbolTokenType
 
@@ -28,7 +28,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     CommentOpenToken ::= "(:"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Comment">REC-xpath20-20101214/#doc-xpath-Comment</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Comment">XPath 2.0 (REC) Comment</a>
      */
     val CommentOpen: SymbolTokenType
 
@@ -37,7 +37,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     EscapeAposToken ::= "''"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-EscapeApos">REC-xpath20-20101214/#doc-xpath-EscapeApos</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-EscapeApos">XPath 2.0 (REC) EscapeApos</a>
      */
     val EscapeApos: SymbolTokenType
 
@@ -46,7 +46,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     EscapeQuotToken ::= '""'
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-EscapeQuot">REC-xpath20-20101214/#doc-xpath-EscapeQuot</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-EscapeQuot">XPath 2.0 (REC) EscapeQuot</a>
      */
     val EscapeQuot: SymbolTokenType
 
@@ -55,7 +55,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     NodeFollowsToken ::= ">>"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-NodeComp">REC-xpath20-20101214/#doc-xpath-NodeComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-NodeComp">XPath 2.0 (REC) NodeComp</a>
      */
     val NodeFollows: SymbolTokenType
 
@@ -64,7 +64,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     NodePrecedesToken ::= "<<"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-NodeComp">REC-xpath20-20101214/#doc-xpath-NodeComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-NodeComp">XPath 2.0 (REC) NodeComp</a>
      */
     val NodePrecedes: SymbolTokenType
 
@@ -73,8 +73,8 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     QuestionMarkToken ::= "?"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SingleType">REC-xpath20-20101214/#doc-xpath-SingleType</a>
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SingleType">XPath 2.0 (REC) SingleType</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">XPath 2.0 (REC) OccurrenceIndicator</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentPlaceholder">REC-xpath-30-20140408/#doc-xpath30-ArgumentPlaceholder</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-Lookup">REC-xpath-31-20170321/#doc-xpath31-Lookup</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-UnaryLookup">REC-xpath-31-20170321/#doc-xpath31-UnaryLookup</a>
@@ -86,7 +86,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     StringLiteralAposToken ::= "'"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">REC-xpath20-20101214/#doc-xpath-StringLiteral</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">XPath 2.0 (REC) StringLiteral</a>
      */
     val StringLiteralApos: SymbolTokenType
 
@@ -95,7 +95,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     StringLiteralQuotToken ::= '"'
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">REC-xpath20-20101214/#doc-xpath-StringLiteral</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">XPath 2.0 (REC) StringLiteral</a>
      */
     val StringLiteralQuot: SymbolTokenType
 
@@ -104,7 +104,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     IntegerLiteral ::= Digits
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IntegerLiteral">REC-xpath20-20101214/#doc-xpath-IntegerLiteral</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IntegerLiteral">XPath 2.0 (REC) IntegerLiteral</a>
      */
     val IntegerLiteral: TerminalSymbolTokenType
 
@@ -114,7 +114,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *     DecimalLiteral ::= ("." Digits)
      *                      | (Digits "." Digits?)
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-DecimalLiteral">REC-xpath20-20101214/#doc-xpath-DecimalLiteral</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-DecimalLiteral">XPath 2.0 (REC) DecimalLiteral</a>
      */
     val DecimalLiteral: TerminalSymbolTokenType
 
@@ -125,7 +125,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *                     | ("." Digits [eE] [+-]? Digits)
      *                     | (Digits "." Digits? [eE] [+-]? Digits)
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-DoubleLiteral">REC-xpath20-20101214/#doc-xpath-DoubleLiteral</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-DoubleLiteral">XPath 2.0 (REC) DoubleLiteral</a>
      */
     val DoubleLiteral: TerminalSymbolTokenType
 
@@ -134,7 +134,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     StringLiteralAposContents ::= (Char - "'")*
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">REC-xpath20-20101214/#doc-xpath-StringLiteral</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">XPath 2.0 (REC) StringLiteral</a>
      */
     val StringLiteralAposContents: TerminalSymbolTokenType
 
@@ -143,7 +143,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     StringLiteralQuotContents ::= (Char - '"')*
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">REC-xpath20-20101214/#doc-xpath-StringLiteral</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">XPath 2.0 (REC) StringLiteral</a>
      */
     val StringLiteralQuotContents: TerminalSymbolTokenType
 
@@ -152,7 +152,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     CommentContents ::= (Char+ - (Char* ('(:' | ':)') Char*))
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CommentContents">REC-xpath20-20101214/#doc-xpath-CommentContents</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CommentContents">XPath 2.0 (REC) CommentContents</a>
      */
     val CommentContents: TerminalSymbolTokenType
 
@@ -161,9 +161,9 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KAsToken ::= "as"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TreatExpr">REC-xpath20-20101214/#doc-xpath-TreatExpr</a>
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastableExpr">REC-xpath20-20101214/#doc-xpath-CastableExpr</a>
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastExpr">REC-xpath20-20101214/#doc-xpath-CastExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TreatExpr">XPath 2.0 (REC) TreatExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastableExpr">XPath 2.0 (REC) CastableExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastExpr">XPath 2.0 (REC) CastExpr</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypeDeclaration">REC-xpath-30-20140408/#doc-xpath30-TypeDeclaration</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest</a>
@@ -175,7 +175,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KCastToken ::= "cast"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastExpr">REC-xpath20-20101214/#doc-xpath-CastExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastExpr">XPath 2.0 (REC) CastExpr</a>
      */
     val KCast: KeywordTokenType
 
@@ -184,7 +184,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KCastableToken ::= "castable"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastableExpr">REC-xpath20-20101214/#doc-xpath-CastableExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastableExpr">XPath 2.0 (REC) CastableExpr</a>
      */
     val KCastable: KeywordTokenType
 
@@ -193,7 +193,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KDocumentNodeToken ::= "document-node"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-DocumentTest">REC-xpath20-20101214/#doc-xpath-DocumentTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-DocumentTest">XPath 2.0 (REC) DocumentTest</a>
      */
     val KDocumentNode: KeywordTokenType
 
@@ -202,7 +202,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KElementToken ::= "element"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementTest">REC-xpath20-20101214/#doc-xpath-ElementTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementTest">XPath 2.0 (REC) ElementTest</a>
      */
     val KElement: KeywordTokenType
 
@@ -211,7 +211,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KElseToken ::= "else"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">REC-xpath20-20101214/#doc-xpath-IfExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">XPath 2.0 (REC) IfExpr</a>
      */
     val KElse: KeywordTokenType
 
@@ -220,7 +220,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KEmptySequenceToken ::= "empty-sequence"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SequenceType">REC-xpath20-20101214/#doc-xpath-SequenceType</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SequenceType">XPath 2.0 (REC) SequenceType</a>
      */
     val KEmptySequence: KeywordTokenType
 
@@ -229,7 +229,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KEqToken ::= "eq"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">REC-xpath20-20101214/#doc-xpath-ValueComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">XPath 2.0 (REC) ValueComp</a>
      */
     val KEq: KeywordTokenType
 
@@ -238,7 +238,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KEveryToken ::= "every"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">REC-xpath20-20101214/#doc-xpath-QuantifiedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
      */
     val KEvery: KeywordTokenType
 
@@ -247,7 +247,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KExceptToken ::= "except"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IntersectExceptExpr">REC-xpath20-20101214/#doc-xpath-IntersectExceptExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IntersectExceptExpr">XPath 2.0 (REC) IntersectExceptExpr</a>
      */
     val KExcept: KeywordTokenType
 
@@ -256,7 +256,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KForToken ::= "for"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">REC-xpath20-20101214/#doc-xpath-SimpleForClause</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">XPath 2.0 (REC) SimpleForClause</a>
      */
     val KFor: KeywordTokenType
 
@@ -265,7 +265,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KGeToken ::= "ge"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">REC-xpath20-20101214/#doc-xpath-ValueComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">XPath 2.0 (REC) ValueComp</a>
      */
     val KGe: KeywordTokenType
 
@@ -274,7 +274,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KGtToken ::= "gt"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">REC-xpath20-20101214/#doc-xpath-ValueComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">XPath 2.0 (REC) ValueComp</a>
      */
     val KGt: KeywordTokenType
 
@@ -283,7 +283,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KIDivToken ::= "idiv"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-MultiplicativeExpr">REC-xpath20-20101214/#doc-xpath-MultiplicativeExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-MultiplicativeExpr">XPath 2.0 (REC) MultiplicativeExpr</a>
      */
     val KIDiv: KeywordTokenType
 
@@ -292,7 +292,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KIfToken ::= "if"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">REC-xpath20-20101214/#doc-xpath-IfExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">XPath 2.0 (REC) IfExpr</a>
      */
     val KIf: KeywordTokenType
 
@@ -301,8 +301,8 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KInToken ::= "in"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">REC-xpath20-20101214/#doc-xpath-SimpleForClause</a>
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">REC-xpath20-20101214/#doc-xpath-QuantifiedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">XPath 2.0 (REC) SimpleForClause</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding">REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding</a>
      */
     val KIn: KeywordTokenType
@@ -312,7 +312,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KInstanceToken ::= "instance"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-InstanceofExpr">REC-xpath20-20101214/#doc-xpath-InstanceofExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-InstanceofExpr">XPath 2.0 (REC) InstanceofExpr</a>
      */
     val KInstance: KeywordTokenType
 
@@ -321,7 +321,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KIntersectToken ::= "intersect"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IntersectExceptExpr">REC-xpath20-20101214/#doc-xpath-IntersectExceptExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IntersectExceptExpr">XPath 2.0 (REC) IntersectExceptExpr</a>
      */
     val KIntersect: KeywordTokenType
 
@@ -330,7 +330,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KIsToken ::= "is"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-NodeComp">REC-xpath20-20101214/#doc-xpath-NodeComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-NodeComp">XPath 2.0 (REC) NodeComp</a>
      */
     val KIs: KeywordTokenType
 
@@ -339,7 +339,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KItemToken ::= "item"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ItemType">REC-xpath20-20101214/#doc-xpath-ItemType</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ItemType">XPath 2.0 (REC) ItemType</a>
      */
     val KItem: KeywordTokenType
 
@@ -348,7 +348,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KLeToken ::= "le"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">REC-xpath20-20101214/#doc-xpath-ValueComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">XPath 2.0 (REC) ValueComp</a>
      */
     val KLe: KeywordTokenType
 
@@ -357,7 +357,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KLtToken ::= "lt"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">REC-xpath20-20101214/#doc-xpath-ValueComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">XPath 2.0 (REC) ValueComp</a>
      */
     val KLt: KeywordTokenType
 
@@ -366,7 +366,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KNeToken ::= "ne"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">REC-xpath20-20101214/#doc-xpath-ValueComp</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ValueComp">XPath 2.0 (REC) ValueComp</a>
      */
     val KNe: KeywordTokenType
 
@@ -375,7 +375,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KOfToken ::= "of"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-InstanceofExpr">REC-xpath20-20101214/#doc-xpath-InstanceofExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-InstanceofExpr">XPath 2.0 (REC) InstanceofExpr</a>
      */
     val KOf: KeywordTokenType
 
@@ -384,7 +384,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KReturnToken ::= "return"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForExpr">REC-xpath20-20101214/#doc-xpath-ForExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForExpr">XPath 2.0 (REC) ForExpr</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-LetExpr">REC-xpath-30-20140408/#doc-xpath30-LetExpr</a>
      */
     val KReturn: KeywordTokenType
@@ -394,7 +394,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KSatisfiesToken ::= "satisfies"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">REC-xpath20-20101214/#doc-xpath-QuantifiedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
      */
     val KSatisfies: KeywordTokenType
 
@@ -403,7 +403,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KSchemaAttributeToken ::= "schema-attribute"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaAttributeTest">REC-xpath20-20101214/#doc-xpath-SchemaAttributeTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaAttributeTest">XPath 2.0 (REC) SchemaAttributeTest</a>
      */
     val KSchemaAttribute: KeywordTokenType
 
@@ -412,7 +412,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KSchemaElementToken ::= "schema-element"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaElementTest">REC-xpath20-20101214/#doc-xpath-SchemaElementTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaElementTest">XPath 2.0 (REC) SchemaElementTest</a>
      */
     val KSchemaElement: KeywordTokenType
 
@@ -421,7 +421,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KSomeToken ::= "some"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">REC-xpath20-20101214/#doc-xpath-QuantifiedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
      */
     val KSome: KeywordTokenType
 
@@ -430,7 +430,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KThenToken ::= "then"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">REC-xpath20-20101214/#doc-xpath-IfExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">XPath 2.0 (REC) IfExpr</a>
      */
     val KThen: KeywordTokenType
 
@@ -439,7 +439,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KToToken ::= "to"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-RangeExpr">REC-xpath20-20101214/#doc-xpath-RangeExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-RangeExpr">XPath 2.0 (REC) RangeExpr</a>
      */
     val KTo: KeywordTokenType
 
@@ -448,7 +448,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KTreatToken ::= "treat"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TreatExpr">REC-xpath20-20101214/#doc-xpath-TreatExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TreatExpr">XPath 2.0 (REC) TreatExpr</a>
      */
     val KTreat: KeywordTokenType
 
@@ -457,7 +457,7 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      *
      *     KUnionToken ::= "union"
      *
-     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-UnionExpr">REC-xpath20-20101214/#doc-xpath-UnionExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-UnionExpr">XPath 2.0 (REC) UnionExpr</a>
      */
     val KUnion: KeywordTokenType
 }
