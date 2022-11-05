@@ -84,10 +84,10 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttributeTest">XPath 2.0 (REC) AttributeTest</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementTest">XPath 2.0 (REC) ElementTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-ParamList">REC-xpath-30-20140408/#prod-xpath30-ParamList</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause">REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">REC-xpath-30-20140408/#doc-xpath30-ArgumentList</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-ParamList">XPath 3.0 (REC) ParamList</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause">XPath 3.0 (REC) SimpleLetClause</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">XPath 3.0 (REC) ArgumentList</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">XPath 3.0 (REC) TypedFunctionTest</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor">REC-xpath-31-20170321/#doc-xpath31-SquareArrayConstructor</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedMapTest">REC-xpath-31-20170321/#doc-xpath31-TypedMapTest</a>
@@ -204,12 +204,12 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaAttributeTest">XPath 2.0 (REC) SchemaAttributeTest</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementTest">XPath 2.0 (REC) ElementTest</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaElementTest">XPath 2.0 (REC) SchemaElementTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">REC-xpath-30-20140408/#doc-xpath30-ArgumentList</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest">REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType">REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">XPath 3.0 (REC) ArgumentList</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">XPath 3.0 (REC) InlineFunctionExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest">XPath 3.0 (REC) NamespaceNodeTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">XPath 3.0 (REC) AnyFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">XPath 3.0 (REC) TypedFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType">XPath 3.0 (REC) ParenthesizedItemType</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyMapTest">REC-xpath-31-20170321/#doc-xpath31-AnyMapTest</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedMapTest">REC-xpath-31-20170321/#doc-xpath31-TypedMapTest</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest">REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest</a>
@@ -239,12 +239,12 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaAttributeTest">XPath 2.0 (REC) SchemaAttributeTest</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementTest">XPath 2.0 (REC) ElementTest</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaElementTest">XPath 2.0 (REC) SchemaElementTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">REC-xpath-30-20140408/#doc-xpath30-ArgumentList</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest">REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType">REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">XPath 3.0 (REC) ArgumentList</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">XPath 3.0 (REC) InlineFunctionExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest">XPath 3.0 (REC) NamespaceNodeTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">XPath 3.0 (REC) AnyFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">XPath 3.0 (REC) TypedFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType">XPath 3.0 (REC) ParenthesizedItemType</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyMapTest">REC-xpath-31-20170321/#doc-xpath31-AnyMapTest</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedMapTest">REC-xpath-31-20170321/#doc-xpath31-TypedMapTest</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest">REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest</a>
@@ -311,7 +311,7 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">XPath 2.0 (REC) OccurrenceIndicator</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttribNameOrWildcard">XPath 2.0 (REC) AttribNameOrWildcard</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementNameOrWildcard">XPath 2.0 (REC) ElementNameOrWildcard</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">XPath 3.0 (REC) AnyFunctionTest</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-KeySpecifier">REC-xpath-31-20170321/#doc-xpath31-KeySpecifier</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyMapTest">REC-xpath-31-20170321/#doc-xpath31-AnyMapTest</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest">REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest</a>
@@ -337,9 +337,9 @@ interface XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">XPath 2.0 (REC) SimpleForClause</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-VarRef">XPath 2.0 (REC) VarRef</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-Param">REC-xpath-30-20140408/#prod-xpath30-Param</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding">REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding</a>
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetBinding">REC-xpath-30-20140408/#doc-xpath30-SimpleLetBinding</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-Param">XPath 3.0 (REC) Param</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding">XPath 3.0 (REC) SimpleForBinding</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetBinding">XPath 3.0 (REC) SimpleLetBinding</a>
      */
     val VariableIndicator: SymbolTokenType
 

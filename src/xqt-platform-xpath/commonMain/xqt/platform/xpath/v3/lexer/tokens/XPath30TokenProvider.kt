@@ -9,8 +9,8 @@ import xqt.platform.xpath.v2.lexer.tokens.XPath20TokenProvider
 /**
  * The tokens present in the XPath 3.0 grammar.
  *
- * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#id-grammar">REC-xpath-30-20140408/#id-grammar</a>
- * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#terminal-symbols">REC-xpath-30-20140408/#terminal-symbols</a>
+ * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#id-grammar">XPath 3.0 (REC) EBNF</a>
+ * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#terminal-symbols">XPath 3.0 (REC) Terminal Symbols</a>
  */
 @Suppress("PropertyName")
 interface XPath30TokenProvider : XPath20TokenProvider {
@@ -19,7 +19,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     AssignEqualsToken ::= ":="
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause">REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause">XPath 3.0 (REC) SimpleLetClause</a>
      */
     val AssignEquals: SymbolTokenType
 
@@ -28,7 +28,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     ConcatenationToken ::= "||"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-StringConcatExpr">REC-xpath-30-20140408/#doc-xpath30-StringConcatExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-StringConcatExpr">XPath 3.0 (REC) StringConcatExpr</a>
      */
     val Concatenation: SymbolTokenType
 
@@ -37,7 +37,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     CurlyBracketCloseToken ::= "}"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-EnclosedExpr">REC-xpath-30-20140408/#prod-xpath30-EnclosedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-EnclosedExpr">XPath 3.0 (REC) EnclosedExpr</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
      */
     val CurlyBracketClose: SymbolTokenType
@@ -47,7 +47,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     CurlyBracketOpenToken ::= "{"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-EnclosedExpr">REC-xpath-30-20140408/#prod-xpath30-EnclosedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-EnclosedExpr">XPath 3.0 (REC) EnclosedExpr</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
      */
     val CurlyBracketOpen: SymbolTokenType
@@ -57,7 +57,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     FunctionRefToken ::= "!"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamedFunctionRef">REC-xpath-30-20140408/#doc-xpath30-NamedFunctionRef</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamedFunctionRef">XPath 3.0 (REC) NamedFunctionRef</a>
      */
     val FunctionRef: SymbolTokenType
 
@@ -66,7 +66,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     MapOperatorToken ::= "!"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleMapExpr">REC-xpath-30-20140408/#doc-xpath30-SimpleMapExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleMapExpr">XPath 3.0 (REC) SimpleMapExpr</a>
      */
     val MapOperator: SymbolTokenType
 
@@ -75,7 +75,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     BracedURILiteral ::= "Q" "{" [^{}]* "}"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-BracedURILiteral">REC-xpath-30-20140408/#doc-xpath30-BracedURILiteral</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-BracedURILiteral">XPath 3.0 (REC) BracedURILiteral</a>
      */
     val BracedURILiteral: TerminalSymbolTokenType
 
@@ -84,7 +84,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     KFunctionToken ::= "function"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">XPath 3.0 (REC) InlineFunctionExpr</a>
      */
     val KFunction: KeywordTokenType
 
@@ -93,7 +93,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     KLetToken ::= "let"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause">REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause">XPath 3.0 (REC) SimpleLetClause</a>
      */
     val KLet: KeywordTokenType
 
@@ -102,7 +102,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *
      *     KNamespaceNodeToken ::= "namespace-node"
      *
-     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaecNodeTest">REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaecNodeTest">XPath 3.0 (REC) NamespaceNodeTest</a>
      */
     val KNamespaceNode: KeywordTokenType
 }
