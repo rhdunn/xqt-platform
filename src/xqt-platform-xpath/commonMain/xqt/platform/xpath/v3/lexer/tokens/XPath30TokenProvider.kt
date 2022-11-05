@@ -38,7 +38,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *     CurlyBracketCloseToken ::= "}"
      *
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-EnclosedExpr">XPath 3.0 (REC) EnclosedExpr</a>
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">XPath 3.1 (REC) MapConstructor</a>
      */
     val CurlyBracketClose: SymbolTokenType
 
@@ -48,7 +48,7 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      *     CurlyBracketOpenToken ::= "{"
      *
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-EnclosedExpr">XPath 3.0 (REC) EnclosedExpr</a>
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">XPath 3.1 (REC) MapConstructor</a>
      */
     val CurlyBracketOpen: SymbolTokenType
 

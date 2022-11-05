@@ -8,8 +8,8 @@ import xqt.platform.xpath.v3.lexer.tokens.XPath30TokenProvider
 /**
  * The tokens present in the XPath 3.1 grammar.
  *
- * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#id-grammar">REC-xpath-31-20170321/#id-grammar</a>
- * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#terminal-symbols">REC-xpath-31-20170321/#terminal-symbols</a>
+ * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#id-grammar">XPath 3.1 (REC) EBNF</a>
+ * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#terminal-symbols">XPath 3.1 (REC) Terminal Symbols</a>
  */
 @Suppress("PropertyName")
 interface XPath31TokenProvider : XPath30TokenProvider {
@@ -18,7 +18,7 @@ interface XPath31TokenProvider : XPath30TokenProvider {
      *
      *     ThickArrowToken ::= "=>"
      *
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-ArrowExpr">REC-xpath-31-20170321/#doc-xpath31-ArrowExpr</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-ArrowExpr">XPath 3.1 (REC) ArrowExpr</a>
      */
     val ThickArrow: SymbolTokenType
 
@@ -27,9 +27,9 @@ interface XPath31TokenProvider : XPath30TokenProvider {
      *
      *     KArrayToken ::= "array"
      *
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-CurlyArrayConstructor">REC-xpath-31-20170321/#doc-xpath31-CurlyArrayConstructor</a>
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest">REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest</a>
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedArrayTest">REC-xpath-31-20170321/#doc-xpath31-TypedArrayTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-CurlyArrayConstructor">XPath 3.1 (REC) CurlyArrayConstructor</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyArrayTest">XPath 3.1 (REC) AnyArrayTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedArrayTest">XPath 3.1 (REC) TypedArrayTest</a>
      */
     val KArray: KeywordTokenType
 
@@ -38,9 +38,9 @@ interface XPath31TokenProvider : XPath30TokenProvider {
      *
      *     KMapToken ::= "map"
      *
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyMapTest">REC-xpath-31-20170321/#doc-xpath31-AnyMapTest</a>
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedMapTest">REC-xpath-31-20170321/#doc-xpath31-TypedMapTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">XPath 3.1 (REC) MapConstructor</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-AnyMapTest">XPath 3.1 (REC) AnyMapTest</a>
+     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-TypedMapTest">XPath 3.1 (REC) TypedMapTest</a>
      */
     val KMap: KeywordTokenType
 }
