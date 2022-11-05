@@ -66,7 +66,7 @@ interface XPath10TokenProvider {
      *     ColonToken ::= ":"
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">REC-xml-names-20091208/#NT-PrefixedName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">Namespaces in XML 1.0 (REC) PrefixedName</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Wildcard">REC-xpath20-20101214/#doc-xpath-Wildcard</a>
      * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-MapConstructor">REC-xpath-31-20170321/#doc-xpath31-MapConstructor</a>
      */
@@ -365,10 +365,10 @@ interface XPath10TokenProvider {
      *     LocalPart      ::= NCName
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-NCName">REC-xml-names-20091208/#NT-NCName</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName">REC-xml-names-20091208/#NT-QName</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-UnprefixedName">REC-xml-names-20091208/#NT-UnprefixedName</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-LocalPart">REC-xml-names-20091208/#NT-LocalPart</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-NCName">Namespaces in XML 1.0 (REC) NCName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName">Namespaces in XML 1.0 (REC) QName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-UnprefixedName">Namespaces in XML 1.0 (REC) UnprefixedName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-LocalPart">Namespaces in XML 1.0 (REC) LocalPart</a>
      */
     val NCName: NCNameTokenType
 
@@ -392,10 +392,10 @@ interface XPath10TokenProvider {
      * __Note:__ This matches the `PrefixedName` variant of `QName` values.
      *
      * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NameTest">REC-xpath-19991116/#NT-NameTest</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName">REC-xml-names-20091208/#NT-QName</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">REC-xml-names-20091208/#NT-PrefixedName</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-Prefix">REC-xml-names-20091208/#NT-Prefix</a>
-     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-LocalPart">REC-xml-names-20091208/#NT-LocalPart</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-QName">Namespaces in XML 1.0 (REC) QName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-PrefixedName">Namespaces in XML 1.0 (REC) PrefixedName</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-Prefix">Namespaces in XML 1.0 (REC) Prefix</a>
+     * @see <a href="https://www.w3.org/TR/2009/REC-xml-names-20091208/#NT-LocalPart">Namespaces in XML 1.0 (REC) LocalPart</a>
      */
     val PrefixedName: TerminalSymbolTokenType
 
