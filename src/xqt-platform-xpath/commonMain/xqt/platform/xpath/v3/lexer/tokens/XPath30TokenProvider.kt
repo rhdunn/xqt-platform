@@ -24,6 +24,18 @@ interface XPath30TokenProvider : XPath20TokenProvider {
     val AssignEquals: SymbolTokenType
 
     /**
+     * The comma token ("`,`").
+     *
+     *     CommaToken ::= ","
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-ParamList">XPath 3.0 (REC) ParamList</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetClause">XPath 3.0 (REC) SimpleLetClause</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">XPath 3.0 (REC) ArgumentList</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">XPath 3.0 (REC) TypedFunctionTest</a>
+     */
+    override val Comma: SymbolTokenType
+
+    /**
      * The concatenation token ("`||`").
      *
      *     ConcatenationToken ::= "||"
@@ -69,6 +81,63 @@ interface XPath30TokenProvider : XPath20TokenProvider {
     val MapOperator: SymbolTokenType
 
     /**
+     * The parenthesis close token ("`)`").
+     *
+     *     ParenthesisCloseToken ::= ")"
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">XPath 3.0 (REC) ArgumentList</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">XPath 3.0 (REC) InlineFunctionExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest">XPath 3.0 (REC) NamespaceNodeTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">XPath 3.0 (REC) AnyFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">XPath 3.0 (REC) TypedFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType">XPath 3.0 (REC) ParenthesizedItemType</a>
+     */
+    override val ParenthesisClose: SymbolTokenType
+
+    /**
+     * The parenthesis open token ("`(`").
+     *
+     *     ParenthesisOpenToken ::= "("
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentList">XPath 3.0 (REC) ArgumentList</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">XPath 3.0 (REC) InlineFunctionExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaceNodeTest">XPath 3.0 (REC) NamespaceNodeTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">XPath 3.0 (REC) AnyFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">XPath 3.0 (REC) TypedFunctionTest</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ParenthesizedItemType">XPath 3.0 (REC) ParenthesizedItemType</a>
+     */
+     override val ParenthesisOpen: SymbolTokenType
+
+    /**
+     * The question mark token ("`?`").
+     *
+     *     QuestionMarkToken ::= "?"
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentPlaceholder">XPath 3.0 (REC) ArgumentPlaceholder</a>
+     */
+    override val QuestionMark: SymbolTokenType
+
+    /**
+     * The star token ("`*`").
+     *
+     *     StarToken ::= "*"
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-AnyFunctionTest">XPath 3.0 (REC) AnyFunctionTest</a>
+     */
+    override val Star: SymbolTokenType
+
+    /**
+     * The variable indicator token ("`$`").
+     *
+     *     VariableIndicatorToken ::= "$"
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#prod-xpath30-Param">XPath 3.0 (REC) Param</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding">XPath 3.0 (REC) SimpleForBinding</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleLetBinding">XPath 3.0 (REC) SimpleLetBinding</a>
+     */
+    override val VariableIndicator: SymbolTokenType
+
+    /**
      * The braced URI literal token.
      *
      *     BracedURILiteral ::= "Q" "{" [^{}]* "}"
@@ -78,6 +147,17 @@ interface XPath30TokenProvider : XPath20TokenProvider {
     val BracedURILiteral: TerminalSymbolTokenType
 
     /**
+     * The `as` keyword token.
+     *
+     *     KAsToken ::= "as"
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">XPath 3.0 (REC) InlineFunctionExpr</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypeDeclaration">XPath 3.0 (REC) TypeDeclaration</a>
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-TypedFunctionTest">XPath 3.0 (REC) TypedFunctionTest</a>
+     */
+    override val KAs: KeywordTokenType
+
+    /**
      * The `function` keyword token.
      *
      *     KFunctionToken ::= "function"
@@ -85,6 +165,15 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-InlineFunctionExpr">XPath 3.0 (REC) InlineFunctionExpr</a>
      */
     val KFunction: KeywordTokenType
+
+    /**
+     * The `in` keyword token.
+     *
+     *     KInToken ::= "in"
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-SimpleForBinding">XPath 3.0 (REC) SimpleForBinding</a>
+     */
+    override val KIn: KeywordTokenType
 
     /**
      * The `let` keyword token.
@@ -103,4 +192,13 @@ interface XPath30TokenProvider : XPath20TokenProvider {
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-NamespaecNodeTest">XPath 3.0 (REC) NamespaceNodeTest</a>
      */
     val KNamespaceNode: KeywordTokenType
+
+    /**
+     * The `return` keyword token.
+     *
+     *     KReturnToken ::= "return"
+     *
+     * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-LetExpr">XPath 3.0 (REC) LetExpr</a>
+     */
+    override val KReturn: KeywordTokenType
 }
