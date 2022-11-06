@@ -76,8 +76,6 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SingleType">XPath 2.0 (REC) SingleType</a>
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">XPath 2.0 (REC) OccurrenceIndicator</a>
      * @see <a href="https://www.w3.org/TR/2014/REC-xpath-30-20140408/#doc-xpath30-ArgumentPlaceholder">XPath 3.0 (REC) ArgumentPlaceholder</a>
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-Lookup">XPath 3.1 (REC) Lookup</a>
-     * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#doc-xpath31-UnaryLookup">XPath 3.1 (REC) UnaryLookup</a>
      */
     val QuestionMark: SymbolTokenType
 
