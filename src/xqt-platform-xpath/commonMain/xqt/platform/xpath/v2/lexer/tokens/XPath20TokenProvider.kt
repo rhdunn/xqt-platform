@@ -15,6 +15,65 @@ import xqt.platform.xpath.v1.lexer.tokens.XPath10TokenProvider
 @Suppress("PropertyName")
 interface XPath20TokenProvider : XPath10TokenProvider {
     /**
+     * The abbreviated `attribute::` selector token ("`@`").
+     *
+     *     AbbrevAttributeToken ::= "@"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AbbrevForwardStep">XPath 2.0 (REC) AbbrevForwardStep</a>
+     */
+    override val AbbrevAttribute: SymbolTokenType
+
+    /**
+     * The abbreviated `descendant-or-self::node()` selector token ("`//`").
+     *
+     *     AbbrevDescendantOrSelfToken ::= "//"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-RelativePathExpr">XPath 2.0 (REC) RelativePathExpr</a>
+     */
+    override val AbbrevDescendantOrSelf: SymbolTokenType
+
+    /**
+     * The abbreviated `parent::node()` selector token ("`..`").
+     *
+     *     AbbrevParentToken ::= ".."
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AbbrevReverseStep">XPath 2.0 (REC) AbbrevReverseStep</a>
+     */
+    override val AbbrevParent: SymbolTokenType
+
+    /**
+     * The axis separator token ("`::`").
+     *
+     *     AxisSeparatorToken ::= "::"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">XPath 2.0 (REC) ReverseAxis</a>
+     */
+    override val AxisSeparator: SymbolTokenType
+
+    /**
+     * The colon token ("`:`").
+     *
+     *     ColonToken ::= ":"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Wildcard">XPath 2.0 (REC) Wildcard</a>
+     */
+    override val Colon: SymbolTokenType
+
+    /**
+     * The comma token ("`,`").
+     *
+     *     CommaToken ::= ","
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Expr">XPath 2.0 (REC) Expr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">XPath 2.0 (REC) SimpleForClause</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttributeTest">XPath 2.0 (REC) AttributeTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementTest">XPath 2.0 (REC) ElementTest</a>
+     */
+    override val Comma: SymbolTokenType
+
+    /**
      * The comment close token ("`:)`").
      *
      *     CommentCloseToken ::= ":)"
@@ -31,6 +90,24 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Comment">XPath 2.0 (REC) Comment</a>
      */
     val CommentOpen: SymbolTokenType
+
+    /**
+     * The context item token ("`.`").
+     *
+     *     ContextItemToken ::= "."
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ContextItemExpr">XPath 2.0 (REC) ContextItemExpr</a>
+     */
+    override val ContextItem: SymbolTokenType
+
+    /**
+     * The equals token ("`=`").
+     *
+     *     EqualsToken ::= "="
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">XPath 2.0 (REC) GeneralComp</a>
+     */
+    override val Equals: SymbolTokenType
 
     /**
      * The escaped apostrophe token ("`''`").
@@ -51,6 +128,42 @@ interface XPath20TokenProvider : XPath10TokenProvider {
     val EscapeQuot: SymbolTokenType
 
     /**
+     * The greater than token ("`>`").
+     *
+     *     GreaterThanToken ::= ">"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">XPath 2.0 (REC) GeneralComp</a>
+     */
+    override val GreaterThan: SymbolTokenType
+
+    /**
+     * The greater than or equals token ("`>=`").
+     *
+     *     GreaterThanOrEqualsToken ::= ">="
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">XPath 2.0 (REC) GeneralComp</a>
+     */
+    override val GreaterThanOrEquals: SymbolTokenType
+
+    /**
+     * The less than token ("`<`").
+     *
+     *     LessThanToken ::= "<"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">XPath 2.0 (REC) GeneralComp</a>
+     */
+    override val LessThan: SymbolTokenType
+
+    /**
+     * The less than or equals token ("`<=`").
+     *
+     *     LessThanOrEqualsToken ::= "<="
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">XPath 2.0 (REC) GeneralComp</a>
+     */
+    override val LessThanOrEquals: SymbolTokenType
+
+    /**
      * The node follows token ("`>>`").
      *
      *     NodeFollowsToken ::= ">>"
@@ -69,6 +182,76 @@ interface XPath20TokenProvider : XPath10TokenProvider {
     val NodePrecedes: SymbolTokenType
 
     /**
+     * The not equals token ("`!=`").
+     *
+     *     NotEqualsToken ::= "!="
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-GeneralComp">XPath 2.0 (REC) GeneralComp</a>
+     */
+    override val NotEquals: SymbolTokenType
+
+    /**
+     * The path operator token ("`/`").
+     *
+     *     PathOperatorToken ::= "/"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-RelativePathExpr">XPath 2.0 (REC) RelativePathExpr</a>
+     */
+    override val PathOperator: SymbolTokenType
+
+    /**
+     * The parenthesis close token ("`)`").
+     *
+     *     ParenthesisCloseToken ::= ")"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">XPath 2.0 (REC) IfExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ParenthesizedExpr">XPath 2.0 (REC) ParenthesizedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SequenceType">XPath 2.0 (REC) SequenceType</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ItemType">XPath 2.0 (REC) ItemType</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AnyKindTest">XPath 2.0 (REC) AnyKindTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-DocumentTest">XPath 2.0 (REC) DocumentTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TextTest">XPath 2.0 (REC) TextTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CommentTest">XPath 2.0 (REC) CommentTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-PITest">XPath 2.0 (REC) PITest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttributeTest">XPath 2.0 (REC) AttributeTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaAttributeTest">XPath 2.0 (REC) SchemaAttributeTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementTest">XPath 2.0 (REC) ElementTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaElementTest">XPath 2.0 (REC) SchemaElementTest</a>
+     */
+    override val ParenthesisClose: SymbolTokenType
+
+    /**
+     * The parenthesis open token ("`(`").
+     *
+     *     ParenthesisOpenToken ::= "("
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IfExpr">XPath 2.0 (REC) IfExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ParenthesizedExpr">XPath 2.0 (REC) ParenthesizedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SequenceType">XPath 2.0 (REC) SequenceType</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ItemType">XPath 2.0 (REC) ItemType</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AnyKindTest">XPath 2.0 (REC) AnyKindTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-DocumentTest">XPath 2.0 (REC) DocumentTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TextTest">XPath 2.0 (REC) TextTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CommentTest">XPath 2.0 (REC) CommentTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-PITest">XPath 2.0 (REC) PITest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttributeTest">XPath 2.0 (REC) AttributeTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaAttributeTest">XPath 2.0 (REC) SchemaAttributeTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementTest">XPath 2.0 (REC) ElementTest</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SchemaElementTest">XPath 2.0 (REC) SchemaElementTest</a>
+     */
+    override val ParenthesisOpen: SymbolTokenType
+
+    /**
+     * The plus token ("`+`").
+     *
+     *     PlusToken ::= "+"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-UnaryExpr">XPath 2.0 (REC) UnaryExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">XPath 2.0 (REC) OccurrenceIndicator</a>
+     */
+    override val Plus: SymbolTokenType
+
+    /**
      * The question mark token ("`?`").
      *
      *     QuestionMarkToken ::= "?"
@@ -77,6 +260,19 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">XPath 2.0 (REC) OccurrenceIndicator</a>
      */
     val QuestionMark: SymbolTokenType
+
+    /**
+     * The star token ("`*`").
+     *
+     *     StarToken ::= "*"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-MultiplicativeExpr">XPath 2.0 (REC) MultiplicativeExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-Wildcard">XPath 2.0 (REC) Wildcard</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-OccurrenceIndicator">XPath 2.0 (REC) OccurrenceIndicator</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttribNameOrWildcard">XPath 2.0 (REC) AttribNameOrWildcard</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ElementNameOrWildcard">XPath 2.0 (REC) ElementNameOrWildcard</a>
+     */
+    override val Star: SymbolTokenType
 
     /**
      * The string literal apostrophe token ("`'`").
@@ -95,6 +291,17 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-StringLiteral">XPath 2.0 (REC) StringLiteral</a>
      */
     val StringLiteralQuot: SymbolTokenType
+
+    /**
+     * The variable indicator token ("`$`").
+     *
+     *     VariableIndicatorToken ::= "$"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-SimpleForClause">XPath 2.0 (REC) SimpleForClause</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-VarRef">XPath 2.0 (REC) VarRef</a>
+     */
+    override val VariableIndicator: SymbolTokenType
 
     /**
      * The integer literal token (`IntegerLiteral`).
@@ -154,6 +361,24 @@ interface XPath20TokenProvider : XPath10TokenProvider {
     val CommentContents: TerminalSymbolTokenType
 
     /**
+     * The `ancestor` keyword token.
+     *
+     *     KAncestorToken ::= "ancestor"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">XPath 2.0 (REC) ReverseAxis</a>
+     */
+    override val KAncestor: KeywordTokenType
+
+    /**
+     * The `ancestor-or-self` keyword token.
+     *
+     *     KAncestorOrSelfToken ::= "ancestor-or-self"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">XPath 2.0 (REC) ReverseAxis</a>
+     */
+    override val KAncestorOrSelf: KeywordTokenType
+
+    /**
      * The `as` keyword token.
      *
      *     KAsToken ::= "as"
@@ -163,6 +388,16 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastExpr">XPath 2.0 (REC) CastExpr</a>
      */
     val KAs: KeywordTokenType
+
+    /**
+     * The `attribute` keyword token.
+     *
+     *     KAttributeToken ::= "attribute"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AttributeTest">XPath 2.0 (REC) AttributeTest</a>
+     */
+    override val KAttribute: KeywordTokenType
 
     /**
      * The `cast` keyword token.
@@ -181,6 +416,42 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-CastableExpr">XPath 2.0 (REC) CastableExpr</a>
      */
     val KCastable: KeywordTokenType
+
+    /**
+     * The `child` keyword token.
+     *
+     *     KChildToken ::= "child"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     */
+    override val KChild: KeywordTokenType
+
+    /**
+     * The `comment` keyword token.
+     *
+     *     KCommentToken ::= "comment"
+     *
+     * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-NodeType">XPath 1.0 (REC) NodeType</a>
+     */
+    override val KComment: KeywordTokenType
+
+    /**
+     * The `descendant` keyword token.
+     *
+     *     KDescendantToken ::= "descendant"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     */
+    override val KDescendant: KeywordTokenType
+
+    /**
+     * The `descendant-or-self` keyword token.
+     *
+     *     KDescendantOrSelfToken ::= "descendant-or-self"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     */
+    override val KDescendantOrSelf: KeywordTokenType
 
     /**
      * The `document-node` keyword token.
@@ -244,6 +515,24 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-IntersectExceptExpr">XPath 2.0 (REC) IntersectExceptExpr</a>
      */
     val KExcept: KeywordTokenType
+
+    /**
+     * The `following` keyword token.
+     *
+     *     KFollowingToken ::= "following"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     */
+    override val KFollowing: KeywordTokenType
+
+    /**
+     * The `following-sibling` keyword token.
+     *
+     *     KFollowingSiblingToken ::= "following-sibling"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     */
+    override val KFollowingSibling: KeywordTokenType
 
     /**
      * The `for` keyword token.
@@ -355,6 +644,15 @@ interface XPath20TokenProvider : XPath10TokenProvider {
     val KLt: KeywordTokenType
 
     /**
+     * The `namespace` keyword token.
+     *
+     *     KNamespaceToken ::= "namespace"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     */
+    override val KNamespace: KeywordTokenType
+
+    /**
      * The `ne` keyword token.
      *
      *     KNeToken ::= "ne"
@@ -364,6 +662,15 @@ interface XPath20TokenProvider : XPath10TokenProvider {
     val KNe: KeywordTokenType
 
     /**
+     * The `node` keyword token.
+     *
+     *     KNodeToken ::= "node"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-AnyKindTest">XPath 2.0 (REC) AnyKindTest</a>
+     */
+    override val KNode: KeywordTokenType
+
+    /**
      * The `of` keyword token.
      *
      *     KOfToken ::= "of"
@@ -371,6 +678,42 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-InstanceofExpr">XPath 2.0 (REC) InstanceofExpr</a>
      */
     val KOf: KeywordTokenType
+
+    /**
+     * The `parent` keyword token.
+     *
+     *     KParentToken ::= "parent"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">XPath 2.0 (REC) ReverseAxis</a>
+     */
+    override val KParent: KeywordTokenType
+
+    /**
+     * The `preceding` keyword token.
+     *
+     *     KPrecedingToken ::= "preceding"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">XPath 2.0 (REC) ReverseAxis</a>
+     */
+    override val KPreceding: KeywordTokenType
+
+    /**
+     * The `preceding-sibling` keyword token.
+     *
+     *     KPrecedingSiblingToken ::= "preceding-sibling"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ReverseAxis">XPath 2.0 (REC) ReverseAxis</a>
+     */
+    override val KPrecedingSibling: KeywordTokenType
+
+    /**
+     * The `processing-instruction` keyword token.
+     *
+     *     KProcessingInstructionToken ::= "processing-instruction"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-PITest">XPath 2.0 (REC) PITest</a>
+     */
+    override val KProcessingInstruction: KeywordTokenType
 
     /**
      * The `return` keyword token.
@@ -389,6 +732,15 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
      */
     val KSatisfies: KeywordTokenType
+
+    /**
+     * The `self` keyword token.
+     *
+     *     KSelfToken ::= "self"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-ForwardAxis">XPath 2.0 (REC) ForwardAxis</a>
+     */
+    override val KSelf: KeywordTokenType
 
     /**
      * The `schema-attribute` keyword token.
@@ -416,6 +768,15 @@ interface XPath20TokenProvider : XPath10TokenProvider {
      * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-QuantifiedExpr">XPath 2.0 (REC) QuantifiedExpr</a>
      */
     val KSome: KeywordTokenType
+
+    /**
+     * The `text` keyword token.
+     *
+     *     KTextToken ::= "text"
+     *
+     * @see <a href="https://www.w3.org/TR/2010/REC-xpath20-20101214/#doc-xpath-TextTest">XPath 2.0 (REC) TextTest</a>
+     */
+    override val KText: KeywordTokenType
 
     /**
      * The `then` keyword token.
