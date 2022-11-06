@@ -1,6 +1,7 @@
 // Copyright (C) 2022 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 package xqt.platform.xml.model
 
+import xqt.platform.xml.W3CRecommendation
 import kotlin.jvm.JvmInline
 
 /**
@@ -11,6 +12,7 @@ import kotlin.jvm.JvmInline
  * @see <a href="http://www.w3.org/TR/REC-xml/#NT-Char">XML 1.0 (REC) Char</a>
  */
 @JvmInline
+@W3CRecommendation
 value class XmlChar(val codepoint: Int) : Comparable<XmlChar> {
     /**
      * Creates an XML character from a Kotlin character.

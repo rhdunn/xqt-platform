@@ -1,6 +1,7 @@
 // Copyright (C) 2022 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 package xqt.platform.xpath.v1.lexer.tokens
 
+import xqt.platform.xml.W3CRecommendation
 import xqt.platform.xml.lexer.tokens.KeywordTokenType
 import xqt.platform.xml.lexer.tokens.NCNameTokenType
 import xqt.platform.xml.lexer.tokens.SymbolTokenType
@@ -11,6 +12,7 @@ import xqt.platform.xml.lexer.tokens.TerminalSymbolTokenType
  *
  * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0 (REC)</a>
  */
+@W3CRecommendation
 @Suppress("PropertyName")
 interface XPath10TokenProvider {
     /**

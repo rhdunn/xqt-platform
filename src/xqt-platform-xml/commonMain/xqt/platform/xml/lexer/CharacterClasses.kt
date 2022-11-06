@@ -1,6 +1,8 @@
 // Copyright (C) 2022 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 package xqt.platform.xml.lexer
 
+import xqt.platform.xml.W3CRecommendation
+
 /**
  * ASCII digits.
  *
@@ -8,6 +10,7 @@ package xqt.platform.xml.lexer
  *
  * @see <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/#NT-Digits">XPath 1.0 (REC) Digits</a>
  */
+@W3CRecommendation
 object Digits : CharacterClass {
     private val range = '0'.code..'9'.code
 
@@ -50,6 +53,7 @@ object AlphaNumeric : CharacterClass {
  *
  * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">XML 1.0 (REC) Char</a>
  */
+@W3CRecommendation
 object Character : CharacterClass {
     override fun contains(c: Int): Boolean = when {
         c <= 0x1F -> c in S
@@ -67,6 +71,7 @@ object Character : CharacterClass {
  *
  * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-S">XML 1.0 (REC) S</a>
  */
+@W3CRecommendation
 object S : CharacterClass {
     private const val HT = 0x09 // U+0009 CHARACTER TABULATION
     private const val LF = 0x0A // U+000A LINE FEED
@@ -91,6 +96,7 @@ object S : CharacterClass {
  *
  * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameStartChar">XML 1.0 (REC) NameStartChar</a>
  */
+@W3CRecommendation
 object NameStartChar : CharacterClass {
     private val ascii_lower = 'a'.code .. 'z'.code
     private val ascii_upper = 'A'.code .. 'Z'.code
@@ -127,6 +133,7 @@ object NameStartChar : CharacterClass {
  * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameChar">XML 1.0 (REC) NameChar</a>
  * @see <a href="https://www.w3.org/TR/2008/REC-xml-20081126/#NT-NameStartChar">XML 1.0 (REC) NameStartChar</a>
  */
+@W3CRecommendation
 object NameChar : CharacterClass {
     private val symbols = setOf('-'.code, '.'.code, ':'.code, '_'.code)
 

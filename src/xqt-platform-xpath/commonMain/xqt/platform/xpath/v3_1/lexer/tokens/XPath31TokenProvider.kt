@@ -1,6 +1,7 @@
 // Copyright (C) 2022 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 package xqt.platform.xpath.v3_1.lexer.tokens
 
+import xqt.platform.xml.W3CRecommendation
 import xqt.platform.xml.lexer.tokens.KeywordTokenType
 import xqt.platform.xml.lexer.tokens.SymbolTokenType
 import xqt.platform.xpath.v3.lexer.tokens.XPath30TokenProvider
@@ -11,6 +12,7 @@ import xqt.platform.xpath.v3.lexer.tokens.XPath30TokenProvider
  * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#id-grammar">XPath 3.1 (REC) EBNF</a>
  * @see <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/#terminal-symbols">XPath 3.1 (REC) Terminal Symbols</a>
  */
+@W3CRecommendation
 @Suppress("PropertyName")
 interface XPath31TokenProvider : XPath30TokenProvider {
     /**
