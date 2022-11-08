@@ -4,3 +4,5 @@ include(":src:kotlinx-test")
 
 include(":src:xqt-platform-xml")
 include(":src:xqt-platform-xpath")
+
+include(":src:xqt-platform-ft")
