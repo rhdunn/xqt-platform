@@ -8,6 +8,8 @@ The XQT platform provides the following libraries that implement support for XML
 related languages:
 1. [xqt-platform-xpath](src/xqt-platform-xpath/README.md) &ndash; Support for
    the XML Path (XPath) language.
+2. [xqt-platform-xslt](src/xqt-platform-xslt/README.md) &ndash; Support for
+   the XSL Transformations (XSLT) language.
 
 ## W3C Extensions
 1. [xqt-platform-ft](src/xqt-platform-ft/README.md) &ndash; Support for
