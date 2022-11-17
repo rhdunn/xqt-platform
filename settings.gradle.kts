@@ -9,3 +9,4 @@ include(":src:xqt-platform-xslt")
 include(":src:xqt-platform-ft")
 
 include(":src:xqt-platform-marklogic")
+include(":src:xqt-platform-saxon")

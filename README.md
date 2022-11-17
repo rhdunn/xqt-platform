@@ -15,6 +15,12 @@ related languages:
 1. [xqt-platform-ft](src/xqt-platform-ft/README.md) &ndash; Support for
    the XPath and XQuery Full Text extensions.
 
+## Vendor Extensions
+1. [xqt-platform-marklogic](src/xqt-platform-marklogic/README.md) &ndash; Support for
+   the MarkLogic XPath and XQuery vendor extensions.
+2. [xqt-platform-saxon](src/xqt-platform-saxon/README.md) &ndash; Support for
+   the saxon XPath and XQuery vendor extensions.
+
 ## Core APIs
 The XQT platform provides the following libraries that provide a common framework
 for implementing the languages:
