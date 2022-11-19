@@ -1,5 +1,5 @@
 // Copyright (C) 2022 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
-package kotlinx.test
+package xqt.kotlinx.test
 
 @Suppress("KDocMissingDocumentation")
 @Target(

@@ -1,5 +1,5 @@
 // Copyright (C) 2022 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
-package kotlinx.test
+package xqt.kotlinx.test
 
 @Suppress("KDocMissingDocumentation")
 @Target(
@@ -8,4 +8,4 @@ package kotlinx.test
     AnnotationTarget.PROPERTY_GETTER,
     AnnotationTarget.PROPERTY_SETTER
 )
-expect annotation class DisplayName(val value: String)
+actual annotation class DisplayName(actual val value: String)

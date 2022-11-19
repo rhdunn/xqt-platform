@@ -63,7 +63,7 @@ kotlin {
             kotlin.srcDir("commonTest")
             dependencies {
                 implementation(kotlin("test"))
-                implementation(project(":src:kotlinx-test"))
+                implementation(project(":src:xqt-kotlinx-test"))
             }
         }
 

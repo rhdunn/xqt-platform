@@ -1,7 +1,7 @@
 // Copyright (C) 2022 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 package xqt.platform.test.xml.lexer
 
-import kotlinx.test.DisplayName
+import xqt.kotlinx.test.DisplayName
 import xqt.platform.xml.lexer.*
 import xqt.platform.xml.model.XmlChar
 import kotlin.test.Test
