@@ -2,6 +2,11 @@ plugins {
     kotlin("multiplatform") version "1.7.20"
 }
 
+rootProject.plugins.withType<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin> {
+    rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().download =
+        System.getProperty("nodejs.download") != "false"
+}
+
 kotlin {
     jvm {
         compilations.all {
