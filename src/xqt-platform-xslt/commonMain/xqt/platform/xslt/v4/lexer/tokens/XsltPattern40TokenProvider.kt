@@ -10,7 +10,7 @@ import xqt.platform.xslt.v3.lexer.tokens.XsltPattern31TokenProvider
 /**
  * The tokens present in the XSLT Patterns 4.0 grammar.
  *
- * @see <a href="httpshttps://qt4cg.org/specifications/xslt-40/Overview.html#pattern-syntax">XSLT 4.0 (Editor's Draft) Patterns</a>
+ * @see <a href="https://qt4cg.org/specifications/xslt-40/Overview.html#pattern-syntax">XSLT 4.0 (Editor's Draft) Patterns</a>
  */
 @W3CEditorsDraft
 @Suppress("PropertyName")
