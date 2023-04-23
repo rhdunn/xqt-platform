@@ -91,19 +91,20 @@ kotlin.sourceSets {
 }
 
 // endregion
+// region Kotlin Native
 
-kotlin {
-    @Suppress("KDocMissingDocumentation")
-    val nativeTarget = when (HostManager.host) {
-        KonanTarget.MACOS_ARM64 -> kotlin.macosArm64("native")
-        KonanTarget.MACOS_X64 -> kotlin.macosX64("native")
-        KonanTarget.LINUX_X64 -> kotlin.linuxX64("native")
-        KonanTarget.MINGW_X64 -> kotlin.mingwX64("native")
-        else -> throw GradleException("Kotlin/Native build target '${HostManager.host.name}' is not supported.")
-    }
-
-    sourceSets {
-        nativeMain.kotlin.srcDir("nativeMain")
-        nativeTest.kotlin.srcDir("nativeTest")
-    }
+@Suppress("KDocMissingDocumentation")
+val nativeTarget = when (HostManager.host) {
+    KonanTarget.MACOS_ARM64 -> kotlin.macosArm64("native")
+    KonanTarget.MACOS_X64 -> kotlin.macosX64("native")
+    KonanTarget.LINUX_X64 -> kotlin.linuxX64("native")
+    KonanTarget.MINGW_X64 -> kotlin.mingwX64("native")
+    else -> throw GradleException("Kotlin/Native build target '${HostManager.host.name}' is not supported.")
 }
+
+kotlin.sourceSets {
+    nativeMain.kotlin.srcDir("nativeMain")
+    nativeTest.kotlin.srcDir("nativeTest")
+}
+
+// endregion
