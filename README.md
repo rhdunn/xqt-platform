@@ -31,6 +31,6 @@ for implementing the languages:
 1. [Lexer](docs/design/lexer.md)
 
 ## License
-Copyright (C) 2022 Reece H. Dunn
+Copyright (C) 2022-2023 Reece H. Dunn
 
 SPDX-License-Identifier: [Apache-2.0](LICENSE)
