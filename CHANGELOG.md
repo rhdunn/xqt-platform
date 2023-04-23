@@ -1,5 +1,7 @@
 # Change Log
 
+## 0.2 - (In Development)
+
 ## 0.1 - 2023-03-29
 1. `XmlChar` definition.
 2. `XmlCharReader` to read the characters in a `CharSequence`.
