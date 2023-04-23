@@ -1,8 +1,12 @@
 # Change Log
 
 ## 0.2 - (In Development)
+1. Use the `io.github.rhdunn` group ID for deployment to Maven Central.
 
 ## 0.1 - 2023-03-29
+> NOTE: This release is not available on Maven Central due to it having the
+> wrong group ID. It has to be built from source and published to Maven Local.
+
 1. `XmlChar` definition.
 2. `XmlCharReader` to read the characters in a `CharSequence`.
 3. Lexer character classes and codepoint constants.

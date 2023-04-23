@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "xqt-platform"
-version  = "0.2-SNAPSHOT"
+version = "0.1"
 
 rootProject.plugins.withType<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin> {
     rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().download =
