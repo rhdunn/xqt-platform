@@ -43,7 +43,7 @@ kotlin {
         nativeMain.kotlin.srcDir("nativeMain")
 
         jvmMain.dependencies {
-            implementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+            implementation("org.junit.jupiter:junit-jupiter-api:${Version.Dependency.JUnit}")
         }
     }
 }
