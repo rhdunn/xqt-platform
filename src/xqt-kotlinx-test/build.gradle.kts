@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.konan.target.HostManager
 import org.jetbrains.kotlin.konan.target.KonanTarget
 
 plugins {
-    kotlin("multiplatform") version "1.7.20"
+    kotlin("multiplatform") version Version.Plugin.KotlinMultiplatform
 }
 
 rootProject.plugins.withType<NodeJsRootPlugin> {
