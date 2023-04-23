@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.plugin.KotlinJsCompilerType
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
 import org.jetbrains.kotlin.konan.target.HostManager
@@ -11,9 +12,48 @@ plugins {
 group = ProjectMetadata.GitHub.GroupId
 version = ProjectMetadata.Build.Version
 
+// region Kotlin JS
+
 rootProject.plugins.withType<NodeJsRootPlugin> {
     rootProject.the<NodeJsRootExtension>().download = BuildConfiguration.nodeJsDownload(project)
 }
+
+kotlin.js(KotlinJsCompilerType.BOTH).browser {
+    testTask {
+        useKarma {
+            when (BuildConfiguration.karmaBrowserTarget(project)) {
+                KarmaBrowserTarget.Chrome -> useChrome()
+                KarmaBrowserTarget.ChromeHeadless -> useChromeHeadless()
+                KarmaBrowserTarget.ChromeCanary -> useChromeCanary()
+                KarmaBrowserTarget.ChromeCanaryHeadless -> useChromeCanaryHeadless()
+                KarmaBrowserTarget.Chromium -> useChromium()
+                KarmaBrowserTarget.ChromiumHeadless -> useChromiumHeadless()
+                KarmaBrowserTarget.Firefox -> useFirefox()
+                KarmaBrowserTarget.FirefoxHeadless -> useFirefoxHeadless()
+                KarmaBrowserTarget.FirefoxAurora -> useFirefoxAurora()
+                KarmaBrowserTarget.FirefoxAuroraHeadless -> useFirefoxAuroraHeadless()
+                KarmaBrowserTarget.FirefoxDeveloper -> useFirefoxDeveloper()
+                KarmaBrowserTarget.FirefoxDeveloperHeadless -> useFirefoxDeveloperHeadless()
+                KarmaBrowserTarget.FirefoxNightly -> useFirefoxNightly()
+                KarmaBrowserTarget.FirefoxNightlyHeadless -> useFirefoxNightlyHeadless()
+                KarmaBrowserTarget.PhantomJs -> usePhantomJS()
+                KarmaBrowserTarget.Safari -> useSafari()
+                KarmaBrowserTarget.Opera -> useOpera()
+                KarmaBrowserTarget.Ie -> useIe()
+            }
+        }
+    }
+}
+
+kotlin.js(KotlinJsCompilerType.BOTH).nodejs {
+}
+
+kotlin.sourceSets {
+    jsMain.kotlin.srcDir("jsMain")
+    jsTest.kotlin.srcDir("jsTest")
+}
+
+// endregion
 
 kotlin {
     jvm {
@@ -23,38 +63,6 @@ kotlin {
         withJava()
         testRuns["test"].executionTask.configure {
             useJUnitPlatform() // JUnit 5
-        }
-    }
-
-    js(BOTH) {
-        browser {
-            testTask {
-                useKarma {
-                    when (BuildConfiguration.karmaBrowserTarget(project)) {
-                        KarmaBrowserTarget.Chrome -> useChrome()
-                        KarmaBrowserTarget.ChromeHeadless -> useChromeHeadless()
-                        KarmaBrowserTarget.ChromeCanary -> useChromeCanary()
-                        KarmaBrowserTarget.ChromeCanaryHeadless -> useChromeCanaryHeadless()
-                        KarmaBrowserTarget.Chromium -> useChromium()
-                        KarmaBrowserTarget.ChromiumHeadless -> useChromiumHeadless()
-                        KarmaBrowserTarget.Firefox -> useFirefox()
-                        KarmaBrowserTarget.FirefoxHeadless -> useFirefoxHeadless()
-                        KarmaBrowserTarget.FirefoxAurora -> useFirefoxAurora()
-                        KarmaBrowserTarget.FirefoxAuroraHeadless -> useFirefoxAuroraHeadless()
-                        KarmaBrowserTarget.FirefoxDeveloper -> useFirefoxDeveloper()
-                        KarmaBrowserTarget.FirefoxDeveloperHeadless -> useFirefoxDeveloperHeadless()
-                        KarmaBrowserTarget.FirefoxNightly -> useFirefoxNightly()
-                        KarmaBrowserTarget.FirefoxNightlyHeadless -> useFirefoxNightlyHeadless()
-                        KarmaBrowserTarget.PhantomJs -> usePhantomJS()
-                        KarmaBrowserTarget.Safari -> useSafari()
-                        KarmaBrowserTarget.Opera -> useOpera()
-                        KarmaBrowserTarget.Ie -> useIe()
-                    }
-                }
-            }
-        }
-
-        nodejs {
         }
     }
 
@@ -82,9 +90,6 @@ kotlin {
 
         jvmMain.kotlin.srcDir("jvmMain")
         jvmTest.kotlin.srcDir("jvmTest")
-
-        jsMain.kotlin.srcDir("jsMain")
-        jsTest.kotlin.srcDir("jsTest")
 
         nativeMain.kotlin.srcDir("nativeMain")
         nativeTest.kotlin.srcDir("nativeTest")

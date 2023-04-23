@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.plugin.KotlinJsCompilerType
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
 import org.jetbrains.kotlin.konan.target.HostManager
@@ -7,9 +8,23 @@ plugins {
     kotlin("multiplatform") version Version.Plugin.KotlinMultiplatform
 }
 
+// region Kotlin JS
+
 rootProject.plugins.withType<NodeJsRootPlugin> {
     rootProject.the<NodeJsRootExtension>().download = BuildConfiguration.nodeJsDownload(project)
 }
+
+kotlin.js(KotlinJsCompilerType.BOTH).browser {
+}
+
+kotlin.js(KotlinJsCompilerType.BOTH).nodejs {
+}
+
+kotlin.sourceSets {
+    jsMain.kotlin.srcDir("jsMain")
+}
+
+// endregion
 
 kotlin {
     jvm {
@@ -17,14 +32,6 @@ kotlin {
             kotlinOptions.jvmTarget = BuildConfiguration.jvmTarget(project)
         }
         withJava()
-    }
-
-    js(BOTH) {
-        browser {
-        }
-
-        nodejs {
-        }
     }
 
     @Suppress("KDocMissingDocumentation")
@@ -39,7 +46,6 @@ kotlin {
     sourceSets {
         commonMain.kotlin.srcDir("commonMain")
         jvmMain.kotlin.srcDir("jvmMain")
-        jsMain.kotlin.srcDir("jsMain")
         nativeMain.kotlin.srcDir("nativeMain")
 
         jvmMain.dependencies {
