@@ -25,15 +25,27 @@ kotlin.sourceSets {
 }
 
 // endregion
+// region Kotlin JVM
 
-kotlin {
-    jvm {
-        compilations.all {
-            kotlinOptions.jvmTarget = BuildConfiguration.jvmTarget(project)
-        }
-        withJava()
+kotlin.jvm {
+    compilations.all {
+        kotlinOptions.jvmTarget = BuildConfiguration.jvmTarget(project)
     }
 
+    withJava()
+}
+
+kotlin.sourceSets {
+    jvmMain.kotlin.srcDir("jvmMain")
+
+    jvmMain.dependencies {
+        implementation("org.junit.jupiter:junit-jupiter-api:${Version.Dependency.JUnit}")
+    }
+}
+
+// endregion
+
+kotlin {
     @Suppress("KDocMissingDocumentation")
     val nativeTarget = when (HostManager.host) {
         KonanTarget.MACOS_ARM64 -> kotlin.macosArm64("native")
@@ -45,11 +57,6 @@ kotlin {
 
     sourceSets {
         commonMain.kotlin.srcDir("commonMain")
-        jvmMain.kotlin.srcDir("jvmMain")
         nativeMain.kotlin.srcDir("nativeMain")
-
-        jvmMain.dependencies {
-            implementation("org.junit.jupiter:junit-jupiter-api:${Version.Dependency.JUnit}")
-        }
     }
 }

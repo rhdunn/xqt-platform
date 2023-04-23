@@ -54,18 +54,28 @@ kotlin.sourceSets {
 }
 
 // endregion
+// region Kotlin JVM
 
-kotlin {
-    jvm {
-        compilations.all {
-            kotlinOptions.jvmTarget = BuildConfiguration.jvmTarget(project)
-        }
-        withJava()
-        testRuns["test"].executionTask.configure {
-            useJUnitPlatform() // JUnit 5
-        }
+kotlin.jvm {
+    compilations.all {
+        kotlinOptions.jvmTarget = BuildConfiguration.jvmTarget(project)
     }
 
+    withJava()
+
+    testRuns["test"].executionTask.configure {
+        useJUnitPlatform() // JUnit 5
+    }
+}
+
+kotlin.sourceSets {
+    jvmMain.kotlin.srcDir("jvmMain")
+    jvmTest.kotlin.srcDir("jvmTest")
+}
+
+// endregion
+
+kotlin {
     @Suppress("KDocMissingDocumentation")
     val nativeTarget = when (HostManager.host) {
         KonanTarget.MACOS_ARM64 -> kotlin.macosArm64("native")
@@ -83,9 +93,6 @@ kotlin {
             implementation(kotlin("test"))
             implementation(project(":src:xqt-kotlinx-test"))
         }
-
-        jvmMain.kotlin.srcDir("jvmMain")
-        jvmTest.kotlin.srcDir("jvmTest")
 
         nativeMain.kotlin.srcDir("nativeMain")
         nativeTest.kotlin.srcDir("nativeTest")
