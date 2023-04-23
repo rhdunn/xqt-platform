@@ -1,5 +1,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
+import org.jetbrains.kotlin.konan.target.HostManager
+import org.jetbrains.kotlin.konan.target.KonanTarget
 
 plugins {
     kotlin("multiplatform") version "1.7.20"
@@ -25,12 +27,13 @@ kotlin {
         }
     }
 
-    val hostOs = System.getProperty("os.name")
-    val nativeTarget = when {
-        hostOs == "Mac OS X" -> macosX64("native")
-        hostOs == "Linux" -> linuxX64("native")
-        hostOs.startsWith("Windows") -> mingwX64("native")
-        else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
+    @Suppress("KDocMissingDocumentation")
+    val nativeTarget = when (HostManager.host) {
+        KonanTarget.MACOS_ARM64 -> kotlin.macosArm64("native")
+        KonanTarget.MACOS_X64 -> kotlin.macosX64("native")
+        KonanTarget.LINUX_X64 -> kotlin.linuxX64("native")
+        KonanTarget.MINGW_X64 -> kotlin.mingwX64("native")
+        else -> throw GradleException("Kotlin/Native build target '${HostManager.host.name}' is not supported.")
     }
 
     sourceSets {
