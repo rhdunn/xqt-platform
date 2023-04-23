@@ -8,6 +8,13 @@ plugins {
     kotlin("multiplatform") version Version.Plugin.KotlinMultiplatform
 }
 
+// region Kotlin Multiplatform (Common)
+
+kotlin.sourceSets {
+    commonMain.kotlin.srcDir("commonMain")
+}
+
+// endregion
 // region Kotlin JS
 
 rootProject.plugins.withType<NodeJsRootPlugin> {
@@ -56,7 +63,6 @@ kotlin {
     }
 
     sourceSets {
-        commonMain.kotlin.srcDir("commonMain")
         nativeMain.kotlin.srcDir("nativeMain")
     }
 }

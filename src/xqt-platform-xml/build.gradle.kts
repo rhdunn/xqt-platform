@@ -12,6 +12,19 @@ plugins {
 group = ProjectMetadata.GitHub.GroupId
 version = ProjectMetadata.Build.Version
 
+// region Kotlin Multiplatform (Common)
+
+kotlin.sourceSets {
+    commonMain.kotlin.srcDir("commonMain")
+    commonTest.kotlin.srcDir("commonTest")
+
+    commonTest.dependencies {
+        implementation(kotlin("test"))
+        implementation(project(":src:xqt-kotlinx-test"))
+    }
+}
+
+// endregion
 // region Kotlin JS
 
 rootProject.plugins.withType<NodeJsRootPlugin> {
@@ -86,14 +99,6 @@ kotlin {
     }
 
     sourceSets {
-        commonMain.kotlin.srcDir("commonMain")
-        commonTest.kotlin.srcDir("commonTest")
-
-        commonTest.dependencies {
-            implementation(kotlin("test"))
-            implementation(project(":src:xqt-kotlinx-test"))
-        }
-
         nativeMain.kotlin.srcDir("nativeMain")
         nativeTest.kotlin.srcDir("nativeTest")
     }
