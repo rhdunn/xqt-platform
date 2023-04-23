@@ -28,16 +28,25 @@ kotlin {
         browser {
             testTask {
                 useKarma {
-                    when (BuildConfiguration.jsBrowser(project)) {
-                        JsBrowser.Chrome -> useChromeHeadless()
-                        JsBrowser.ChromeCanary -> useChromeCanaryHeadless()
-                        JsBrowser.Chromium -> useChromiumHeadless()
-                        JsBrowser.Firefox -> useFirefoxHeadless()
-                        JsBrowser.FirefoxAurora -> useFirefoxAuroraHeadless()
-                        JsBrowser.FirefoxDeveloper -> useFirefoxDeveloperHeadless()
-                        JsBrowser.FirefoxNightly -> useFirefoxNightlyHeadless()
-                        JsBrowser.PhantomJs -> usePhantomJS()
-                        JsBrowser.Safari -> useSafari()
+                    when (BuildConfiguration.karmaBrowserTarget(project)) {
+                        KarmaBrowserTarget.Chrome -> useChrome()
+                        KarmaBrowserTarget.ChromeHeadless -> useChromeHeadless()
+                        KarmaBrowserTarget.ChromeCanary -> useChromeCanary()
+                        KarmaBrowserTarget.ChromeCanaryHeadless -> useChromeCanaryHeadless()
+                        KarmaBrowserTarget.Chromium -> useChromium()
+                        KarmaBrowserTarget.ChromiumHeadless -> useChromiumHeadless()
+                        KarmaBrowserTarget.Firefox -> useFirefox()
+                        KarmaBrowserTarget.FirefoxHeadless -> useFirefoxHeadless()
+                        KarmaBrowserTarget.FirefoxAurora -> useFirefoxAurora()
+                        KarmaBrowserTarget.FirefoxAuroraHeadless -> useFirefoxAuroraHeadless()
+                        KarmaBrowserTarget.FirefoxDeveloper -> useFirefoxDeveloper()
+                        KarmaBrowserTarget.FirefoxDeveloperHeadless -> useFirefoxDeveloperHeadless()
+                        KarmaBrowserTarget.FirefoxNightly -> useFirefoxNightly()
+                        KarmaBrowserTarget.FirefoxNightlyHeadless -> useFirefoxNightlyHeadless()
+                        KarmaBrowserTarget.PhantomJs -> usePhantomJS()
+                        KarmaBrowserTarget.Safari -> useSafari()
+                        KarmaBrowserTarget.Opera -> useOpera()
+                        KarmaBrowserTarget.Ie -> useIe()
                     }
                 }
             }
