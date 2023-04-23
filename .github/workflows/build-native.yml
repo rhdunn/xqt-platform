@@ -1,5 +1,5 @@
 name: Build Kotlin/Native
-on: [push]
+on: [ push ]
 
 jobs:
   build:

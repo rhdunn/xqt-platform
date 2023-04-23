@@ -1,5 +1,5 @@
 name: Build Kotlin/JS Legacy
-on: [push]
+on: [ push ]
 
 jobs:
   build:
