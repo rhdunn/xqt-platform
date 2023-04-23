@@ -65,40 +65,26 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
-            kotlin.srcDir("commonMain")
-            dependencies {
-                implementation(project(":src:xqt-platform-xml"))
-                implementation(project(":src:xqt-platform-xpath"))
-            }
-        }
-        val commonTest by getting {
-            kotlin.srcDir("commonTest")
-            dependencies {
-                implementation(kotlin("test"))
-                implementation(project(":src:xqt-kotlinx-test"))
-            }
+        commonMain.kotlin.srcDir("commonMain")
+        commonTest.kotlin.srcDir("commonTest")
+
+        commonMain.dependencies {
+            implementation(project(":src:xqt-platform-xml"))
+            implementation(project(":src:xqt-platform-xpath"))
         }
 
-        val jvmMain by getting {
-            kotlin.srcDir("jvmMain")
-        }
-        val jvmTest by getting {
-            kotlin.srcDir("jvmTest")
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+            implementation(project(":src:xqt-kotlinx-test"))
         }
 
-        val jsMain by getting {
-            kotlin.srcDir("jsMain")
-        }
-        val jsTest by getting {
-            kotlin.srcDir("jsTest")
-        }
+        jvmMain.kotlin.srcDir("jvmMain")
+        jvmTest.kotlin.srcDir("jvmTest")
 
-        val nativeMain by getting {
-            kotlin.srcDir("nativeMain")
-        }
-        val nativeTest by getting {
-            kotlin.srcDir("nativeTest")
-        }
+        jsMain.kotlin.srcDir("jsMain")
+        jsTest.kotlin.srcDir("jsTest")
+
+        nativeMain.kotlin.srcDir("nativeMain")
+        nativeTest.kotlin.srcDir("nativeTest")
     }
 }
