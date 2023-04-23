@@ -8,8 +8,8 @@ plugins {
     id("maven-publish")
 }
 
-group = "xqt-platform"
-version = "0.1"
+group = ProjectMetadata.GitHub.GroupId
+version = ProjectMetadata.Build.Version
 
 rootProject.plugins.withType<NodeJsRootPlugin> {
     rootProject.the<NodeJsRootExtension>().download = BuildConfiguration.nodeJsDownload(project)
