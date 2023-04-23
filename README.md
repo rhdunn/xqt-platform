@@ -1,7 +1,9 @@
-# XQT (XML Query/Transform) Platform
-The XQT platform is an open-source implementation of the XPath, XQuery, and XSLT
-languages. The goal of this project is to provide an API capable of supporting
-code analysis and IDE tools.
+# xqt-platform
+> Kotlin multiplatform XPath, XQuery, and XSLT library
+
+The `xqt-platform` library is an open-source implementation of the XPath,
+XQuery, and XSLT languages. The goal of this project is to provide an API
+capable of supporting code analysis and IDE tools.
 
 ## Languages
 The XQT platform provides the following libraries that implement support for XML

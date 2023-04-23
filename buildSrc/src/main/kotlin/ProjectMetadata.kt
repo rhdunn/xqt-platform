@@ -7,7 +7,7 @@ object ProjectMetadata {
     /**
      * A short description of the project.
      */
-    const val Description = "Kotlin multiplatform project template" // TODO: Modify this property.
+    const val Description = "Kotlin multiplatform XPath, XQuery, and XSLT library"
 
     /**
      * Version information about the current build of the project.
@@ -16,12 +16,12 @@ object ProjectMetadata {
         /**
          * The semantic version of the current version.
          */
-        const val VersionTag = "1.0.0" // TODO: Modify this property.
+        const val VersionTag = "0.2"
 
         /**
          * The build type of this project.
          */
-        val Type = BuildType.Snapshot // TODO: Modify this property.
+        val Type = BuildType.Snapshot
 
         /**
          * The artifact version ID.
@@ -36,22 +36,22 @@ object ProjectMetadata {
         /**
          * The ID of the GitHub account (organization or developer) to which this project belongs.
          */
-        const val AccountId = "rhdunn" // TODO: Modify this property.
+        const val AccountId = "rhdunn"
 
         /**
          * The name of the GitHub account (organization or developer) to which this project belongs.
          */
-        const val AccountName = "Reece H. Dunn" // TODO: Modify this property.
+        const val AccountName = "Reece H. Dunn"
 
         /**
          * The email address of the GitHub account (organization or developer) to which this project belongs.
          */
-        const val AccountEmail = "msclrhd@gmail.com" // TODO: Modify this property.
+        const val AccountEmail = "msclrhd@gmail.com"
 
         /**
          * The ID of the GitHub repository.
          */
-        const val RepoId = "kotlin-multiplatform-template" // TODO: Modify this property.
+        const val RepoId = "xqt-platform"
 
         /**
          * The Maven group ID.
@@ -86,12 +86,12 @@ object ProjectMetadata {
         /**
          * The name of the license, for Maven POM metadata.
          */
-        const val Name = "The Apache Software License, Version 2.0" // TODO: Modify this property.
+        const val Name = "The Apache Software License, Version 2.0"
 
         /**
          * The URL where the license text can be found.
          */
-        const val Url = "https://www.apache.org/licenses/LICENSE-2.0.txt" // TODO: Modify this property.
+        const val Url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
     }
 
     /**
@@ -101,11 +101,11 @@ object ProjectMetadata {
         /**
          * The copyright year range for the project.
          */
-        const val Year = "2023" // TODO: Modify this property.
+        const val Year = "2022-2023"
 
         /**
          * The person or organization owning the copyright for the project.
          */
-        const val Owner = "Reece H. Dunn" // TODO: Modify this property.
+        const val Owner = "Reece H. Dunn"
     }
 }
