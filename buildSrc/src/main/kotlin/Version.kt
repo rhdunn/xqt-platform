@@ -34,6 +34,9 @@ object Version {
          */
         const val DokkaBase = Plugin.Dokka
 
+        /**
+         * The version of the `junit` library.
+         */
         const val JUnit = "5.6.0"
     }
 }
