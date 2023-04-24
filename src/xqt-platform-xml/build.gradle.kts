@@ -1,11 +1,21 @@
+import org.jetbrains.dokka.base.DokkaBase
+import org.jetbrains.dokka.base.DokkaBaseConfiguration
+import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.plugin.KotlinJsCompilerType
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
 import org.jetbrains.kotlin.konan.target.HostManager
 import org.jetbrains.kotlin.konan.target.KonanTarget
 
+buildscript {
+    dependencies {
+        classpath(Dependency.DokkaBase)
+    }
+}
+
 plugins {
     kotlin("multiplatform") version Version.Plugin.KotlinMultiplatform
+    id("org.jetbrains.dokka") version Version.Plugin.Dokka
     id("maven-publish")
 }
 
@@ -101,6 +111,15 @@ val nativeTarget = when (HostManager.host) {
 kotlin.sourceSets {
     nativeMain.kotlin.srcDir("nativeMain")
     nativeTest.kotlin.srcDir("nativeTest")
+}
+
+// endregion
+// region Dokka
+
+tasks.withType<DokkaTask>().configureEach {
+    pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+        footerMessage = "Copyright © ${ProjectMetadata.Copyright.Year} ${ProjectMetadata.Copyright.Owner}"
+    }
 }
 
 // endregion

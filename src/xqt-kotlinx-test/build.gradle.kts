@@ -4,8 +4,15 @@ import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
 import org.jetbrains.kotlin.konan.target.HostManager
 import org.jetbrains.kotlin.konan.target.KonanTarget
 
+buildscript {
+    dependencies {
+        classpath(Dependency.DokkaBase)
+    }
+}
+
 plugins {
     kotlin("multiplatform") version Version.Plugin.KotlinMultiplatform
+    id("org.jetbrains.dokka") version Version.Plugin.Dokka
 }
 
 // region Kotlin Multiplatform (Common)
