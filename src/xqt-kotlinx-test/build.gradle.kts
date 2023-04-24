@@ -13,6 +13,7 @@ buildscript {
 plugins {
     kotlin("multiplatform") version Version.Plugin.KotlinMultiplatform
     id("org.jetbrains.dokka") version Version.Plugin.Dokka
+    id("signing")
 }
 
 // region Kotlin Multiplatform (Common)
