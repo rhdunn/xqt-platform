@@ -6,6 +6,7 @@ import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
 import org.jetbrains.kotlin.konan.target.HostManager
 import org.jetbrains.kotlin.konan.target.KonanTarget
+import java.net.URI
 
 buildscript {
     dependencies {
@@ -169,6 +170,26 @@ publishing.publications.withType<MavenPublication> {
 
         issueManagement {
             url.set(ProjectMetadata.GitHub.IssuesUrl)
+        }
+    }
+}
+
+// endregion
+// region Publish to Maven
+
+publishing.repositories {
+    maven {
+        name = "sonatype"
+
+        url = if (ProjectMetadata.Build.Type == BuildType.Release) {
+            URI("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+        } else {
+            URI("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+        }
+
+        credentials {
+            username = BuildConfiguration.ossrhUsername(project)
+            password = BuildConfiguration.ossrhPassword(project)
         }
     }
 }
