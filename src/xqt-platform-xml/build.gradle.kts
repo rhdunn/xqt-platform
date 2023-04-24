@@ -122,4 +122,13 @@ tasks.withType<DokkaTask>().configureEach {
     }
 }
 
+@Suppress("KDocMissingDocumentation")
+val javadocJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("javadoc")
+}
+
+publishing.publications.withType<MavenPublication> {
+    artifact(javadocJar)
+}
+
 // endregion
