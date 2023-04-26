@@ -1,4 +1,4 @@
-name: Build Kotlin/Native for Mac OS X
+name: Build Kotlin/Native for Mac TV OS
 on: [ push ]
 
 jobs:
@@ -8,8 +8,9 @@ jobs:
       matrix:
         # https://kotlinlang.org/docs/native-target-support.html ; KonanTarget.name
         konan-target: [
-          macos_arm64, # Tier 1 ; native host
-          macos_x64, # Tier 1 ; native host
+          tvos_arm64, # Tier 2
+          tvos_simulator_arm64, # Tier 2
+          tvos_x64, # Tier 2
         ]
 
     runs-on: macos-latest

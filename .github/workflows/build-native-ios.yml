@@ -1,4 +1,4 @@
-name: Build Kotlin/Native for Mac OS X
+name: Build Kotlin/Native for Mac iOS
 on: [ push ]
 
 jobs:
@@ -8,8 +8,10 @@ jobs:
       matrix:
         # https://kotlinlang.org/docs/native-target-support.html ; KonanTarget.name
         konan-target: [
-          macos_arm64, # Tier 1 ; native host
-          macos_x64, # Tier 1 ; native host
+          ios_arm32, # Deprecated, to be removed in 1.9.20
+          ios_arm64, # Tier 2
+          ios_simulator_arm64, # Tier 1
+          ios_x64, # Tier 1
         ]
 
     runs-on: macos-latest

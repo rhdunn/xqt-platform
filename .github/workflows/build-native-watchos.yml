@@ -1,4 +1,4 @@
-name: Build Kotlin/Native for Mac OS X
+name: Build Kotlin/Native for Mac Watch OS
 on: [ push ]
 
 jobs:
@@ -8,8 +8,11 @@ jobs:
       matrix:
         # https://kotlinlang.org/docs/native-target-support.html ; KonanTarget.name
         konan-target: [
-          macos_arm64, # Tier 1 ; native host
-          macos_x64, # Tier 1 ; native host
+          watchos_arm32, # Tier 2
+          watchos_arm64, # Tier 2
+          watchos_simulator_arm64, # Tier 2
+          watchos_x64, # Tier 2
+          watchos_x86, # Deprecated, to be removed in 1.9.20
         ]
 
     runs-on: macos-latest
