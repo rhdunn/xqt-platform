@@ -5,6 +5,8 @@ The `xqt-platform` library is an open-source implementation of the XPath,
 XQuery, and XSLT languages. The goal of this project is to provide an API
 capable of supporting code analysis and IDE tools.
 
+The documentation is available at https://rhdunn.github.io/xqt-platform/.
+
 ## Languages
 The XQT platform provides the following libraries that implement support for XML
 related languages:
