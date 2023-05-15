@@ -6,9 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Improve the build infrastructure to support automated deployment.
+- Include all the supported JVM target variants in the `kotlinMultiplatform` module metadata.
+
 ### Changed
 
-1. Use the `io.github.rhdunn` group ID for deployment to Maven Central.
+- Use the `io.github.rhdunn` group ID for deployment to Maven Central.
 
 ## [0.1] - 2023-03-29
 
