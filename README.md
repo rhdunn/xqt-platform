@@ -1,13 +1,28 @@
 # xqt-platform
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.rhdunn/xqt-platform)](https://central.sonatype.com/artifact/io.github.rhdunn/xqt-platfom)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 > Kotlin multiplatform XPath, XQuery, and XSLT library
 
 The `xqt-platform` library is an open-source implementation of the XPath,
 XQuery, and XSLT languages. The goal of this project is to provide an API
 capable of supporting code analysis and IDE tools.
 
-The documentation is available at https://rhdunn.github.io/xqt-platform/.
+-----
 
-## Languages
+1. [Features](#features)
+   1. [Languages](#languages)
+   2. [W3C Extensions](#w3c-extensions)
+   3. [Vendor Extensions](#vendor-extensions)
+   4. [Core APIs](#core-apis)
+2. [Adding the Library as a Maven Dependency](#adding-the-library-as-a-maven-dependency)
+3. [Supported Kotlin/Native Targets](#supported-kotlinnative-targets)
+4. [Documentation](#documentation)
+   1. [Building the Project with Gradle](#building-the-project-with-gradle)
+   2. [Design Documentation](#design-documentation)
+5. [License](#license)
+
+## Features
+### Languages
 The XQT platform provides the following libraries that implement support for XML
 related languages:
 1. [xqt-platform-xpath](src/xqt-platform-xpath/README.md) &ndash; Support for
@@ -15,24 +30,41 @@ related languages:
 2. [xqt-platform-xslt](src/xqt-platform-xslt/README.md) &ndash; Support for
    the XSL Transformations (XSLT) language.
 
-## W3C Extensions
+### W3C Extensions
 1. [xqt-platform-ft](src/xqt-platform-ft/README.md) &ndash; Support for
    the XPath and XQuery Full Text extensions.
 
-## Vendor Extensions
+### Vendor Extensions
 1. [xqt-platform-marklogic](src/xqt-platform-marklogic/README.md) &ndash; Support for
    the MarkLogic XPath and XQuery vendor extensions.
 2. [xqt-platform-saxon](src/xqt-platform-saxon/README.md) &ndash; Support for
    the saxon XPath and XQuery vendor extensions.
 
-## Core APIs
+### Core APIs
 The XQT platform provides the following libraries that provide a common framework
 for implementing the languages:
 1. [xqt-platform-xml](src/xqt-platform-xml/README.md) &ndash; A common set of
    XML types and lexer primitives.
 
-## Design Documentation
-1. [Lexer](docs/design/lexer.md)
+## Adding the Library as a Maven Dependency
+The `xqt-platform` binaries are available on
+[Maven Central](https://central.sonatype.com/artifact/io.github.rhdunn/xqt-platform).
+
+Maven:
+
+    <dependency>
+        <groupId>io.github.rhdunn</groupId>
+        <artifactId>xqt-platform</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+
+Gradle (Groovy DSL):
+
+    implementation 'io.github.rhdunn:xqt-platform:1.0.0'
+
+Gradle (Kotlin DSL):
+
+    implementation("io.github.rhdunn:xqt-platform:1.0.0")
 
 ## Supported Kotlin/Native Targets
 | Target [1]                | Family       | Tier [1]       | Status         |
@@ -76,6 +108,17 @@ JetBrains for the Kotlin/Native target.
 
 [4] The tests fail with Kotlin 1.7.20. There is a fix for this in the Kotlin
 1.8.0 release. See [KT-54814](https://youtrack.jetbrains.com/issue/KT-54814).
+
+## Documentation
+1. [API Documentation](https://rhdunn.github.io/xqt-platform/)
+
+### Building the Project with Gradle
+1. [Build Properties](docs/build/Build%20Properties.md)
+2. [Environment Variables](docs/build/Envvironment%20Variables.md)
+3. [Signing Artifacts](docs/build/Signing%20Artifacts.md)
+
+### Design Documentation
+1. [Lexer](docs/design/lexer.md)
 
 ## License
 Copyright (C) 2022-2023 Reece H. Dunn
