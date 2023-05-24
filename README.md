@@ -55,16 +55,16 @@ Maven:
     <dependency>
         <groupId>io.github.rhdunn</groupId>
         <artifactId>xqt-platform</artifactId>
-        <version>1.0.0</version>
+        <version>0.2.0</version>
     </dependency>
 
 Gradle (Groovy DSL):
 
-    implementation 'io.github.rhdunn:xqt-platform:1.0.0'
+    implementation 'io.github.rhdunn:xqt-platform:0.2.0'
 
 Gradle (Kotlin DSL):
 
-    implementation("io.github.rhdunn:xqt-platform:1.0.0")
+    implementation("io.github.rhdunn:xqt-platform:0.2.0")
 
 ## Supported Kotlin/Native Targets
 | Target [1]                | Family       | Tier [1]       | Status         |

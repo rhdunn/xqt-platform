@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2023-05-24
+
 ### Fixed
 
 - Improve the build infrastructure to support automated deployment.
@@ -32,5 +34,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 4. MarkLogic 6.0 - 9.0 Vendor Extensions
 5. Saxon 9.8 - 11.0 Vendor Extensions
 
-[Unreleased]: https://github.com/rhdunn/xqt-platform/compare/0.1...HEAD
+[Unreleased]: https://github.com/rhdunn/xqt-platform/compare/0.2...HEAD
+[0.2.0]: https://github.com/rhdunn/xqt-platform/compare/0.1...0.2
 [0.1]: https://github.com/rhdunn/xqt-platform/releases/tag/0.1
