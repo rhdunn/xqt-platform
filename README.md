@@ -1,5 +1,5 @@
 # xqt-platform
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.rhdunn/xqt-platform)](https://central.sonatype.com/artifact/io.github.rhdunn/xqt-platfom)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.rhdunn/xqt-platform-xpath)](https://central.sonatype.com/artifact/io.github.rhdunn/xqt-platform-xpath)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 > Kotlin multiplatform XPath, XQuery, and XSLT library
 
@@ -48,23 +48,26 @@ for implementing the languages:
 
 ## Adding the Library as a Maven Dependency
 The `xqt-platform` binaries are available on
-[Maven Central](https://central.sonatype.com/artifact/io.github.rhdunn/xqt-platform).
+[Maven Central](https://central.sonatype.com/artifact/io.github.rhdunn/xqt-platform-xpath).
 
 Maven:
 
     <dependency>
         <groupId>io.github.rhdunn</groupId>
-        <artifactId>xqt-platform</artifactId>
+        <artifactId>[LIBRARY]</artifactId>
         <version>0.2.0</version>
     </dependency>
 
 Gradle (Groovy DSL):
 
-    implementation 'io.github.rhdunn:xqt-platform:0.2.0'
+    implementation 'io.github.rhdunn:[LIBRARY]:0.2.0'
 
 Gradle (Kotlin DSL):
 
-    implementation("io.github.rhdunn:xqt-platform:0.2.0")
+    implementation("io.github.rhdunn:[LIBRARY]:0.2.0")
+
+Here, `[LIBRARY]` is one of the modules listed in the [Features](#features)
+section.
 
 ## Supported Kotlin/Native Targets
 | Target [1]                | Family       | Tier [1]       | Status         |
